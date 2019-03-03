@@ -1,0 +1,82 @@
+# .gitignore
+
+# archive files
+*.bz2
+*.gz
+*.zip
+*.tar
+
+# common
+*.log
+
+# git
+patch/
+
+# jetbrains ide
+*.iml
+.idea/
+
+# jupyter notebook
+.ipynb_checkpoints/
+
+# python byte-compiled, optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# latex
+## core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+## intermediate documents:
+*.dvi
+*.xdv
+*-converted-to.*
+## bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+## build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+## build tool directories for auxiliary files
+latex.out/
+
+# media
+video/
+
+# folders
+archive/
+!bin
+bin/*
+build/
+build_isolated/
+devel/
+devel_isolated/
+inbox/
+outbox/
+output/
+
+# inclusions
+!bin/setup.sh
+
+# Operating system files
+.DS_Store
+Thumbs.db
