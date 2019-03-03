@@ -1,0 +1,706 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.edowson.com/ontologies/2019/2ai#"
+     xml:base="http://www.edowson.com/ontologies/2019/2ai"
+     xmlns:ai="http://www.edowson.com/ontologies/2019/2/ai#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ed-ai="http://www.edowson.com/ontologies/2019/02/ai#">
+    <owl:Ontology rdf:about="http://www.edowson.com/ontologies/2019/2ai"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#hasComplexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#hasComplexity">
+        <rdfs:domain rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Complexity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has complexity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#isUsedToSolve -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#isUsedToSolve">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is used to solve</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#Engineering"/>
+        <rdfs:label xml:lang="en">Artificial Intelligence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#AutomatedReasoning -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#AutomatedReasoning">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence"/>
+        <rdfs:label xml:lang="en">Automated Reasoning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ComputerVision -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ComputerVision">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence"/>
+        <rdfs:label xml:lang="en">Computer Vision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Engineering -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Domain"/>
+        <rdfs:label xml:lang="en">Engineering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#KnowledgeRepresentation -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#KnowledgeRepresentation">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence"/>
+        <rdfs:label xml:lang="en">Knowledge Representation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#MachineLearning -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MachineLearning">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence"/>
+        <rdfs:label xml:lang="en">Machine Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#MachineTeaching -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MachineTeaching">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence"/>
+        <rdfs:label xml:lang="en">Machine Teaching</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#NaturalLanguageProcessing -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#NaturalLanguageProcessing">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence"/>
+        <rdfs:label xml:lang="en">Natural Language Processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ReinforcementLearning -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ReinforcementLearning">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MachineLearning"/>
+        <rdfs:label xml:lang="en">Reinforcement Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Robotics -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Robotics">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence"/>
+        <rdfs:label xml:lang="en">Robotics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#SupervisedLearning -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#SupervisedLearning">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MachineLearning"/>
+        <owl:disjointWith rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#UnsupervisedLearning"/>
+        <rdfs:label xml:lang="en">Supervised Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#UnsupervisedLearning -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#UnsupervisedLearning">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MachineLearning"/>
+        <rdfs:label xml:lang="en">Unsupervised Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/idj#Decision -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Decision">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Analysis"/>
+        <rdfs:label xml:lang="en">Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/idj#Issue -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Issue">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Analysis"/>
+        <rdfs:label xml:lang="en">Issue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/idj#Justification -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Justification">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Analysis"/>
+        <rdfs:label xml:lang="en">Justification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/operational#Constraint -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Constraint">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/operational#Problem -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Problem">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Problem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/operational#Solution -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Solution">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Solution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Algorithm -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Algorithm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Analysis -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Analysis">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Approach -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Approach">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Approach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Architecture -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Architecture">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Architecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Category -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Category">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Complexity -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Complexity">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Complexity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Component -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Component">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Concept -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Concept">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Data -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Data">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Database -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Database">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Database</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Dataset -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Design -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Design">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Document -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Document">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Domain -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Domain">
+        <rdfs:label xml:lang="en">Domain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Equation -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Equation">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Equation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Framework -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Framework">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Function -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Function">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Group -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Group">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Implementation -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Implementation">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Implementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Infrastructure -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Infrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Infrastructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Integration -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Integration">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Integration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Interface -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Interface">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Interface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Library -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Library</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#LossFunction -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#LossFunction">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
+        <rdfs:label xml:lang="en">Loss Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#OperatingSystem -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#OperatingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Operating System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Procedure -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Procedure">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Process -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Process">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Protocol -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Protocol">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Protocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#SpaceComplexity -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#SpaceComplexity">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Complexity"/>
+        <owl:disjointWith rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#TimeComplexity"/>
+        <rdfs:label xml:lang="en">Space Complexity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Standard -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Standard">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Technical -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technical">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Domain"/>
+        <rdfs:label xml:lang="en">Technical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Technique -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Test -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Test">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#TimeComplexity -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#TimeComplexity">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Complexity"/>
+        <rdfs:label xml:lang="en">Time Complexity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Tool -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Tool">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Tool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#BayesianRegret -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#BayesianRegret">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Framework"/>
+        <rdfs:label xml:lang="en">Bayesian Regret</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+        <ai:isUsedToSolve rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TrainingStability"/>
+        <rdfs:label xml:lang="en">Experience Replay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#MBIE-EB -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MBIE-EB">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <rdfs:label xml:lang="en">Model-Based Interval Estimation with Exploration Bonus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#OptimismUnderUncertainty -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#OptimismUnderUncertainty">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Approach"/>
+        <rdfs:label xml:lang="en">Optimism under uncertainty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#PAC -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#PAC">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Framework"/>
+        <rdfs:label xml:lang="en">PAC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Regret -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Regret">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Framework"/>
+        <rdfs:label xml:lang="en">Regret</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#StrongCorrelationBetweenSamples -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#StrongCorrelationBetweenSamples">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
+        <rdfs:label xml:lang="en">Strong correlation between samples</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ThompsonSampling -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ThompsonSampling">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Approach"/>
+        <rdfs:label xml:lang="en">Thompson Sampling</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#TrainingStability -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#TrainingStability">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
+        <rdfs:label xml:lang="en">Training Stability</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#AutomatedReasoning"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ComputerVision"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#KnowledgeRepresentation"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MachineLearning"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MachineTeaching"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#NaturalLanguageProcessing"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Robotics"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Decision"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Issue"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Justification"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Constraint"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Solution"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Analysis"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Approach"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Architecture"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Category"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Complexity"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Component"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Concept"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Data"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Database"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Dataset"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Design"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Document"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Equation"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Framework"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Group"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Implementation"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Infrastructure"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Integration"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Interface"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#OperatingSystem"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Procedure"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Process"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Protocol"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Standard"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Test"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Tool"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+
