@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.edowson.com/ontologies/2019/2ai#"
-     xml:base="http://www.edowson.com/ontologies/2019/2ai"
+<rdf:RDF xmlns="http://www.edowson.com/ontologies/2019/02/ai#"
+     xml:base="http://www.edowson.com/ontologies/2019/02/ai"
      xmlns:ai="http://www.edowson.com/ontologies/2019/2/ai#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,7 +8,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ed-ai="http://www.edowson.com/ontologies/2019/02/ai#">
-    <owl:Ontology rdf:about="http://www.edowson.com/ontologies/2019/2ai"/>
+    <owl:Ontology rdf:about="http://www.edowson.com/ontologies/2019/02/ai"/>
     
 
 
@@ -20,6 +20,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/02/ai#writtenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/02/ai#writtenBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>written by</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -70,10 +79,27 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/02/technical#Book -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/02/technical#Book">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Document"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/02/technical#Paper -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/02/technical#Paper">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/02/technical#Performance -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/02/technical#Performance">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Measure"/>
+        <rdfs:label xml:lang="en">Performance</rdfs:label>
     </owl:Class>
     
 
@@ -277,6 +303,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Accuracy -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Accuracy">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Measure"/>
+        <rdfs:label xml:lang="en">Accuracy</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#Algorithm -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm">
@@ -313,6 +348,14 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Author -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Author">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Role"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#Category -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Category">
@@ -325,7 +368,7 @@
     <!-- http://www.edowson.com/ontologies/2019/2/technical#Complexity -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Complexity">
-        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Measure"/>
         <rdfs:label xml:lang="en">Complexity</rdfs:label>
     </owl:Class>
     
@@ -492,6 +535,14 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Measure -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Measure">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#OperatingSystem -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#OperatingSystem">
@@ -524,6 +575,22 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Protocol">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
         <rdfs:label xml:lang="en">Protocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Reviewer -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Reviewer">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Role -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Role">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
     </owl:Class>
     
 
@@ -696,11 +763,20 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/02/technical#Book"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/02/technical#Technote"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/02/technical#Thesis"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/02/technical#Tutorial"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/02/technical#UserGuide"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/02/technical#Performance"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Accuracy"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Complexity"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -734,7 +810,6 @@
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Approach"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Architecture"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Category"/>
-            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Complexity"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Component"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Concept"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Data"/>
@@ -751,10 +826,12 @@
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Integration"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Interface"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Measure"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#OperatingSystem"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Procedure"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Process"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Protocol"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Role"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Standard"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Test"/>
