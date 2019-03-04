@@ -188,11 +188,30 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#CNN -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#CNN">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#NonLinear"/>
+        <owl:disjointWith rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DNN"/>
+        <rdfs:label xml:lang="en">CNN</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#ComputerVision -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ComputerVision">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence"/>
         <rdfs:label xml:lang="en">Computer Vision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DNN -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DNN">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#NonLinear"/>
+        <rdfs:label xml:lang="en">DNN</rdfs:label>
     </owl:Class>
     
 
@@ -405,6 +424,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Classifier -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Classifier">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Classifier</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#Complexity -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Complexity">
@@ -566,6 +594,16 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Linear -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Linear">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Classifier"/>
+        <owl:disjointWith rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#NonLinear"/>
+        <rdfs:label xml:lang="en">Linear</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#LossFunction -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#LossFunction">
@@ -579,6 +617,15 @@
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Measure">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#NonLinear -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#NonLinear">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Classifier"/>
+        <rdfs:label xml:lang="en">Non-Linear</rdfs:label>
     </owl:Class>
     
 
@@ -856,14 +903,7 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Decision"/>
-            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Issue"/>
-            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Justification"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Type"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Constraint"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Solution"/>
@@ -872,6 +912,7 @@
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Approach"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Architecture"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Category"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Classifier"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Component"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Concept"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Data"/>
@@ -898,6 +939,14 @@
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Test"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Tool"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Decision"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Issue"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Justification"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
