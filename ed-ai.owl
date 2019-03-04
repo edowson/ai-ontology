@@ -1,14 +1,38 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.edowson.com/ontologies/2019/02/ai#"
-     xml:base="http://www.edowson.com/ontologies/2019/02/ai"
+<rdf:RDF xmlns="http://www.edowson.com/ontologies/2019/2/ai#"
+     xml:base="http://www.edowson.com/ontologies/2019/2/ai"
      xmlns:ai="http://www.edowson.com/ontologies/2019/2/ai#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:ed-ai="http://www.edowson.com/ontologies/2019/02/ai#">
-    <owl:Ontology rdf:about="http://www.edowson.com/ontologies/2019/02/ai"/>
+     xmlns:ed-ai="http://www.edowson.com/ontologies/2019/02/ai#"
+     xmlns:technical="http://www.edowson.com/ontologies/2019/2/technical#">
+    <owl:Ontology rdf:about="http://www.edowson.com/ontologies/2019/2/ai"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#email -->
+
+    <owl:AnnotationProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#email"/>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#url -->
+
+    <owl:AnnotationProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#url"/>
     
 
 
@@ -23,28 +47,43 @@
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/02/ai#writtenBy -->
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#authoredBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/02/ai#writtenBy">
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#authoredBy">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:label>written by</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#hasAuthored"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Document"/>
+        <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">authored by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#hasComplexity -->
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#hasAuthored -->
 
-    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#hasComplexity">
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#hasAuthored">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Document"/>
+        <rdfs:label xml:lang="en">has authored</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#hasComplexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#hasComplexity">
         <rdfs:domain rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
         <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Complexity"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has complexity</rdfs:label>
+        <rdfs:label xml:lang="en">has complexity</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#isUsedToSolve -->
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#isUsedToSolve -->
 
-    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#isUsedToSolve">
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#isUsedToSolve">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -54,7 +93,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is used to solve</rdfs:label>
+        <rdfs:label xml:lang="en">is used to solve</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -67,15 +106,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/02/ai#Type -->
-
-    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/02/ai#Type">
-        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
-        <rdfs:label xml:lang="en">Type</rdfs:label>
-    </owl:Class>
     
 
 
@@ -240,6 +270,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Type -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Type">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#UnsupervisedLearning -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#UnsupervisedLearning">
@@ -352,6 +391,7 @@
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Author">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Role"/>
+        <rdfs:label>Author</rdfs:label>
     </owl:Class>
     
 
@@ -583,6 +623,7 @@
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Reviewer">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Role"/>
+        <rdfs:label>Reviewer</rdfs:label>
     </owl:Class>
     
 
@@ -591,6 +632,7 @@
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Role">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label>Role</rdfs:label>
     </owl:Class>
     
 
@@ -679,11 +721,31 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DeepDroneRacingLearningAgileFlightInDynamicEnvironments -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DeepDroneRacingLearningAgileFlightInDynamicEnvironments">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <url xml:lang="en">https://arxiv.org/abs/1806.08548</url>
+        <rdfs:label xml:lang="en">Deep Drone Racing: Learning Agile Flight in Dynamic Environments</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#EliaKaufmann -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#EliaKaufmann">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <email xml:lang="en">ekaufmann@@ifi.uzh.ch</email>
+        <rdfs:label xml:lang="en">Elia Kaufmann</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
-        <ai:isUsedToSolve rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TrainingStability"/>
+        <technical:isUsedToSolve rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TrainingStability"/>
         <rdfs:label xml:lang="en">Experience Replay</rdfs:label>
     </owl:NamedIndividual>
     
