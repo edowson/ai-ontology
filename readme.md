@@ -9,7 +9,7 @@ Use the following settings you are using [WebProtege](https://webprotege.stanfor
 ### WebProtege Settings
 
 **New Entity Settings**
-IRI Prefix: http://www.edowson.com/ontologies/2019/02/ai#
+IRI Prefix: http://www.edowson.com/ontologies/2019/2/ai#
 IRI Suffix: Supplied name
 Spaces: Collapse and transform to CamelCase
 
