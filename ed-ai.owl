@@ -574,6 +574,16 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#DirectedMethod -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#DirectedMethod">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+        <owl:disjointWith rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#UndirectedMethod"/>
+        <rdfs:label xml:lang="en">Directed Method</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#Document -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Document">
@@ -851,6 +861,14 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Theorem -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Theorem">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#TimeComplexity -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#TimeComplexity">
@@ -874,6 +892,15 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Type">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
         <rdfs:label xml:lang="en">Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#UndirectedMethod -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#UndirectedMethod">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+        <rdfs:label xml:lang="en">Undirected Method</rdfs:label>
     </owl:Class>
     
 
@@ -939,6 +966,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#EpsilonGreedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#EpsilonGreedy">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#UndirectedMethod"/>
+        <rdfs:label xml:lang="en">ε-greedy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay">
@@ -956,6 +992,24 @@ changes in the data distribution.</dc:description>
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Go">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Game"/>
         <rdfs:label xml:lang="en">Go</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#HighSampleEfficiency -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HighSampleEfficiency">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Benefit"/>
+        <rdfs:label xml:lang="en">High sample efficiency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#HoeffdingsInequality -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HoeffdingsInequality">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Theorem"/>
+        <rdfs:label xml:lang="en">Hoeffding’s Inequality</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -987,6 +1041,7 @@ changes in the data distribution.</dc:description>
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MonteCarloTreeSearch">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#MonteCarlo"/>
         <rdfs:label xml:lang="en">Monte-Carlo Tree Search</rdfs:label>
+        <skos:altLabel xml:lang="en">MCTS</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -1058,7 +1113,7 @@ changes in the data distribution.</dc:description>
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ThompsonSampling">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Approach"/>
-        <rdfs:label xml:lang="en">Thompson Sampling</rdfs:label>
+        <rdfs:label xml:lang="en">Thompson sampling</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1067,7 +1122,17 @@ changes in the data distribution.</dc:description>
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#TrainingStability">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
-        <rdfs:label xml:lang="en">Training Stability</rdfs:label>
+        <rdfs:label xml:lang="en">Training stability</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#UCB -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#UCB">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#DirectedMethod"/>
+        <rdfs:label xml:lang="en">Upper Confidence Bound</rdfs:label>
+        <skos:altLabel xml:lang="en">UCB</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -1171,6 +1236,7 @@ changes in the data distribution.</dc:description>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Standard"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Test"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Theorem"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Tool"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Type"/>
         </owl:members>
