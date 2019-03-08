@@ -772,6 +772,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DeepDroneRacingLearningAgileFlightInDynamicEnvironments">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#EliaKaufmann"/>
         <url xml:lang="en">https://arxiv.org/abs/1806.08548</url>
         <rdfs:label xml:lang="en">Deep Drone Racing: Learning Agile Flight in Dynamic Environments</rdfs:label>
     </owl:NamedIndividual>
