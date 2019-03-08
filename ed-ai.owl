@@ -98,7 +98,14 @@
 
     <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#isSolvedBy">
         <owl:inverseOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#isUsedToSolve"/>
-        <rdfs:domain rdf:resource="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Issue"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -125,7 +132,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Issue"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:label xml:lang="en">is used to solve</rdfs:label>
     </owl:ObjectProperty>
     
@@ -253,6 +267,15 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#AutomatedReasoning">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence"/>
         <rdfs:label xml:lang="en">Automated Reasoning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#BanditAlgorithm -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#BanditAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <rdfs:label>Bandit Algorithm</rdfs:label>
     </owl:Class>
     
 
@@ -390,24 +413,6 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Justification">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Analysis"/>
         <rdfs:label xml:lang="en">Justification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/2/operational#Problem -->
-
-    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Problem">
-        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
-        <rdfs:label xml:lang="en">Problem</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/2/operational#Solution -->
-
-    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Solution">
-        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
-        <rdfs:label xml:lang="en">Solution</rdfs:label>
     </owl:Class>
     
 
@@ -681,6 +686,23 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Issue -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Issue">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#LearningProblem -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#LearningProblem">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
+        <rdfs:label>Learning Problem</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#Library -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library">
@@ -734,11 +756,11 @@
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/technical#MonteCarlo -->
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#MonteCarloAlgorithm -->
 
-    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#MonteCarlo">
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#MonteCarloAlgorithm">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
-        <rdfs:label xml:lang="en">Monte-Carlo</rdfs:label>
+        <rdfs:label xml:lang="en">Monte-Carlo Algorithm</rdfs:label>
     </owl:Class>
     
 
@@ -757,6 +779,15 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#OperatingSystem">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
         <rdfs:label xml:lang="en">Operating System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Problem -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Problem">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Problem</rdfs:label>
     </owl:Class>
     
 
@@ -811,6 +842,15 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Role">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
         <rdfs:label>Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Solution -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Solution">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Solution</rdfs:label>
     </owl:Class>
     
 
@@ -925,6 +965,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Cartpole -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Cartpole">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#LearningProblem"/>
+        <rdfs:label xml:lang="en">Cartpole</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#DQN -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DQN">
@@ -932,6 +981,15 @@
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay"/>
         <rdfs:label xml:lang="en">Deep Q-Network</rdfs:label>
         <skos:altLabel xml:lang="en">DQN</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DecayingEpsilonGreedyBanditAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DecayingEpsilonGreedyBanditAlgorithm">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#BanditAlgorithm"/>
+        <rdfs:label xml:lang="en">Decaying ε-greedy bandit algorithm</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -987,11 +1045,29 @@ changes in the data distribution.</dc:description>
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#GLIEEpsilonGreedyBanditAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#GLIEEpsilonGreedyBanditAlgorithm">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#BanditAlgorithm"/>
+        <rdfs:label xml:lang="en">GLIE ε-greedy bandit algorithm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#Go -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Go">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Game"/>
         <rdfs:label xml:lang="en">Go</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#HalfCheetah -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HalfCheetah">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#LearningProblem"/>
+        <rdfs:label xml:lang="en">HalfCheetah</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1026,6 +1102,14 @@ changes in the data distribution.</dc:description>
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#InvertedPendulum -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#InvertedPendulum">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#LearningProblem"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#MBIE-EB -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MBIE-EB">
@@ -1036,12 +1120,21 @@ changes in the data distribution.</dc:description>
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#MonteCarloTreeSearch -->
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#MonteCarloTreeSearchAlgorithm -->
 
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MonteCarloTreeSearch">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#MonteCarlo"/>
-        <rdfs:label xml:lang="en">Monte-Carlo Tree Search</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MonteCarloTreeSearchAlgorithm">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#MonteCarloAlgorithm"/>
+        <rdfs:label xml:lang="en">Monte-Carlo Tree Search algorithm</rdfs:label>
         <skos:altLabel xml:lang="en">MCTS</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#MultiArmedBandit -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MultiArmedBandit">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#LearningProblem"/>
+        <rdfs:label xml:lang="en">Multi-armed Bandit</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1103,7 +1196,7 @@ changes in the data distribution.</dc:description>
     <!-- http://www.edowson.com/ontologies/2019/2/ai#StrongCorrelationBetweenSamples -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#StrongCorrelationBetweenSamples">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
         <rdfs:label xml:lang="en">Strong correlation between samples</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1118,10 +1211,19 @@ changes in the data distribution.</dc:description>
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ThompsonSamplingForBanditsAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ThompsonSamplingForBanditsAlgorithm">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#BanditAlgorithm"/>
+        <rdfs:label xml:lang="en">Thompson sampling for bandits algorithm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#TrainingStability -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#TrainingStability">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
         <rdfs:label xml:lang="en">Training stability</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1133,6 +1235,15 @@ changes in the data distribution.</dc:description>
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#DirectedMethod"/>
         <rdfs:label xml:lang="en">Upper Confidence Bound</rdfs:label>
         <skos:altLabel xml:lang="en">UCB</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#UCBBanditAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#UCBBanditAlgorithm">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#BanditAlgorithm"/>
+        <rdfs:label xml:lang="en">UCB bandit algorithm</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1196,8 +1307,6 @@ changes in the data distribution.</dc:description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
-            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Solution"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Analysis"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Application"/>
@@ -1223,16 +1332,19 @@ changes in the data distribution.</dc:description>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Infrastructure"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Integration"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Interface"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Issue"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Measure"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#OperatingSystem"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Procedure"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Process"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Property"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Protocol"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Role"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Solution"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Standard"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Test"/>
