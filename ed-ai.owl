@@ -358,15 +358,6 @@
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#Type -->
-
-    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Type">
-        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
-        <rdfs:label xml:lang="en">Type</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.edowson.com/ontologies/2019/2/ai#UnsupervisedLearning -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#UnsupervisedLearning">
@@ -878,6 +869,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Type -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Type">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1123,7 +1123,14 @@ changes in the data distribution.</dc:description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Type"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Decision"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Issue"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Justification"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Problem"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/operational#Solution"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
@@ -1165,14 +1172,7 @@ changes in the data distribution.</dc:description>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Test"/>
             <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Tool"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Decision"/>
-            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Issue"/>
-            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Justification"/>
+            <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Type"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
