@@ -61,6 +61,31 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#helpsAvoid -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#helpsAvoid">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Issue"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">helps avoid</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#authoredBy -->
 
     <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#authoredBy">
@@ -69,6 +94,17 @@
         <rdfs:domain rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Document"/>
         <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
         <rdfs:label xml:lang="en">authored by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#has">
+        <owl:inverseOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#isA"/>
+        <rdfs:domain rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+        <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <rdfs:label xml:lang="en">has</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -90,6 +126,16 @@
         <rdfs:domain rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
         <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Complexity"/>
         <rdfs:label xml:lang="en">has complexity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#isA -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#isA">
+        <rdfs:domain rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+        <rdfs:label xml:lang="en">is a</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -756,6 +802,24 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#ModelBased -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#ModelBased">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+        <rdfs:label xml:lang="en">Model-based</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#ModelFree -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#ModelFree">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+        <rdfs:label xml:lang="en">Model-free</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#MonteCarloAlgorithm -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#MonteCarloAlgorithm">
@@ -979,6 +1043,14 @@
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DQN">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#FixedQTargets"/>
+        <dc:description xml:lang="en">DQN uses experience replay and fixed Q-targets
+Store transition (s_t , a_t , r_t+1 , s_t+1 ) in replay memory D
+Sample random mini-batch of transitions (s, a, r , s&apos; ) from D
+Compute Q-learning targets w.r.t. old, fixed parameters w‾
+Optimizes MSE between Q-network and Q-learning targets
+Uses stochastic gradient descent
+Achieved human-level performance on a number of Atari games</dc:description>
         <rdfs:label xml:lang="en">Deep Q-Network</rdfs:label>
         <skos:altLabel xml:lang="en">DQN</skos:altLabel>
     </owl:NamedIndividual>
@@ -1005,11 +1077,45 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DifferentWeightsToSelectAndEvaluateActions -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DifferentWeightsToSelectAndEvaluateActions">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+        <helpsAvoid rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MaximizationBias"/>
+        <rdfs:label xml:lang="en">Different weights to select and evaluate actions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DoubleDQN -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DoubleDQN">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <technical:isA rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ModelFreeDeepReinforcementLearningMethod"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DifferentWeightsToSelectAndEvaluateActions"/>
+        <dc:description xml:lang="en">To help avoid maximization bias, use different weights to select and evaluate actions
+Current Q-network w is used to select actions
+Older Q-network w‾ is used to evaluate actions</dc:description>
+        <rdfs:label xml:lang="en">Double DQN</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#DroneRacing -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DroneRacing">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Application"/>
         <rdfs:label xml:lang="en">Drone Racing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DuelingDQN -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DuelingDQN">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <technical:isA rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ModelFreeDeepReinforcementLearningMethod"/>
+        <rdfs:label xml:lang="en">Dueling DQN</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1041,6 +1147,15 @@
         <dc:description xml:lang="en">A biologically inspired mechanism termed experience replay that randomizes over the data, thereby removing correlations in the observation sequence and smoothing over
 changes in the data distribution.</dc:description>
         <rdfs:label xml:lang="en">Experience Replay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#FixedQTargets -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#FixedQTargets">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+        <rdfs:label xml:lang="en">Fixed Q-targets</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1120,6 +1235,33 @@ changes in the data distribution.</dc:description>
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#MaximizationBias -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MaximizationBias">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
+        <rdfs:label xml:lang="en">Maximization bias</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ModelBasedReinforcementLearningMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ModelBasedReinforcementLearningMethod">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#ModelBased"/>
+        <rdfs:label xml:lang="en">Model-based Reinforcement Learning Method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ModelFreeDeepReinforcementLearningMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ModelFreeDeepReinforcementLearningMethod">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#ModelFree"/>
+        <rdfs:label xml:lang="en">Model-free Deep Reinforcement Learning Method</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#MonteCarloTreeSearchAlgorithm -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MonteCarloTreeSearchAlgorithm">
@@ -1153,6 +1295,17 @@ changes in the data distribution.</dc:description>
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#PAC">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Framework"/>
         <rdfs:label xml:lang="en">PAC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#PER -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#PER">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <technical:isA rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ModelFreeDeepReinforcementLearningMethod"/>
+        <rdfs:label xml:lang="en">Prioritized Experience Replay</rdfs:label>
+        <skos:altLabel xml:lang="en">PER</skos:altLabel>
     </owl:NamedIndividual>
     
 
