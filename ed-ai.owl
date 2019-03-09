@@ -199,6 +199,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
@@ -218,6 +219,7 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
@@ -1031,6 +1033,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#AdvantageFunction -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#AdvantageFunction">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
+        <rdfs:label xml:lang="en">Advantage Function</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#BayesianRegret -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#BayesianRegret">
@@ -1049,12 +1060,28 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DDQN -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DDQN">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <technical:isA rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ModelFreeDeepReinforcementLearningMethod"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DifferentWeightsToSelectAndEvaluateActions"/>
+        <dc:description xml:lang="en">To help avoid maximization bias, use different weights to select and evaluate actions
+Current Q-network w is used to select actions
+Older Q-network w‾ is used to evaluate actions</dc:description>
+        <rdfs:label xml:lang="en">Double DQN</rdfs:label>
+        <skos:altLabel xml:lang="en">DDQN</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#DQN -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DQN">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#FixedQTargets"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#HuberLossOnBellmanError"/>
         <dc:description xml:lang="en">DQN uses experience replay and fixed Q-targets
 Store transition (s_t , a_t , r_t+1 , s_t+1 ) in replay memory D
 Sample random mini-batch of transitions (s, a, r , s&apos; ) from D
@@ -1098,20 +1125,6 @@ Achieved human-level performance on a number of Atari games</dc:description>
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#DoubleDQN -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DoubleDQN">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
-        <technical:isA rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ModelFreeDeepReinforcementLearningMethod"/>
-        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DifferentWeightsToSelectAndEvaluateActions"/>
-        <dc:description xml:lang="en">To help avoid maximization bias, use different weights to select and evaluate actions
-Current Q-network w is used to select actions
-Older Q-network w‾ is used to evaluate actions</dc:description>
-        <rdfs:label xml:lang="en">Double DQN</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.edowson.com/ontologies/2019/2/ai#DroneRacing -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DroneRacing">
@@ -1126,6 +1139,7 @@ Older Q-network w‾ is used to evaluate actions</dc:description>
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DuelingDQN">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
         <technical:isA rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ModelFreeDeepReinforcementLearningMethod"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#AdvantageFunction"/>
         <rdfs:label xml:lang="en">Dueling DQN</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1212,6 +1226,15 @@ changes in the data distribution.</dc:description>
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HoeffdingsInequality">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Theorem"/>
         <rdfs:label xml:lang="en">Hoeffding’s Inequality</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#HuberLossOnBellmanError -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HuberLossOnBellmanError">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#LossFunction"/>
+        <rdfs:label xml:lang="en">Huber loss on Bellman error</rdfs:label>
     </owl:NamedIndividual>
     
 
