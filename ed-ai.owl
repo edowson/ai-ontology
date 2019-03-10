@@ -32,15 +32,29 @@
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#email -->
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#algorithm -->
 
-    <owl:AnnotationProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#email"/>
+    <owl:AnnotationProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#algorithm"/>
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#url -->
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#email -->
 
-    <owl:AnnotationProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#url"/>
+    <owl:AnnotationProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#email"/>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#sourceCode -->
+
+    <owl:AnnotationProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#sourceCode">
+        <rdfs:label xml:lang="en">source code</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#url -->
+
+    <owl:AnnotationProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#url"/>
     
 
 
@@ -1270,13 +1284,13 @@ Older Q-network w‾ is used to evaluate actions</dc:description>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#FixedQTargets"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#HuberLossOnBellmanError"/>
-        <dc:description xml:lang="en">DQN uses experience replay and fixed Q-targets
+        <technical:algorithm xml:lang="en">DQN uses experience replay and fixed Q-targets
 Store transition (s_t , a_t , r_t+1 , s_t+1 ) in replay memory D
 Sample random mini-batch of transitions (s, a, r , s&apos; ) from D
 Compute Q-learning targets w.r.t. old, fixed parameters w‾
 Optimizes MSE between Q-network and Q-learning targets
 Uses stochastic gradient descent
-Achieved human-level performance on a number of Atari games</dc:description>
+Achieved human-level performance on a number of Atari games</technical:algorithm>
         <rdfs:label xml:lang="en">Deep Q-Network</rdfs:label>
         <skos:altLabel xml:lang="en">DQN</skos:altLabel>
     </owl:NamedIndividual>
@@ -1297,7 +1311,7 @@ Achieved human-level performance on a number of Atari games</dc:description>
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DeepDroneRacingLearningAgileFlightInDynamicEnvironments">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
         <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#EliaKaufmann"/>
-        <url xml:lang="en">https://arxiv.org/abs/1806.08548</url>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1806.08548</technical:url>
         <rdfs:label xml:lang="en">Deep Drone Racing: Learning Agile Flight in Dynamic Environments</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1351,7 +1365,7 @@ Optimize loss function by stochastic gradient descent (SGD)</dc:description>
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#EliaKaufmann">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
-        <email xml:lang="en">ekaufmann@@ifi.uzh.ch</email>
+        <technical:email xml:lang="en">ekaufmann@@ifi.uzh.ch</technical:email>
         <rdfs:label xml:lang="en">Elia Kaufmann</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1382,6 +1396,14 @@ Optimize loss function by stochastic gradient descent (SGD)</dc:description>
         <technical:isUsedToSolve rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TrainingStability"/>
         <dc:description xml:lang="en">A biologically inspired mechanism termed experience replay that randomizes over the data, thereby removing correlations in the observation sequence and smoothing over
 changes in the data distribution.</dc:description>
+        <technical:algorithm xml:lang="en">To help remove correlations, store dataset D from prior experience.
+
+To perform experience replay, repeat the following:
+- (s, a, r , s&apos; ) ∼ D: sample an experience tuple from the dataset
+- Compute the target value for the sampled s: r + γ max_a&apos; Q̂(s&apos; , a&apos; ; w )
+- Use stochastic gradient descent to update the network weights
+
+Can treat the target as a scalar, but the weights will get updated on the next round, changing the target value.</technical:algorithm>
         <rdfs:label xml:lang="en">Experience Replay</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1400,16 +1422,16 @@ changes in the data distribution.</dc:description>
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#FixedQTargets">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
-        <dc:description xml:lang="en">To help improve stability, fix the target weights used in the target calculation for multiple updates
+        <technical:algorithm xml:lang="en">To help improve stability, fix the target weights used in the target calculation for multiple updates.
 
-Use a different set of weights to compute target than is being updated
+Use a different set of weights to compute target than is being updated.
 
-Let parameters w‾ be the set of weights used in the target, and w be the weights that are being updated
+Let parameters w‾ be the set of weights used in the target, and w be the weights that are being updated.
 
 Slight change to computation of target value:
 - (s, a, r , s&apos; ) ∼ D: sample an experience tuple from the dataset
 - Compute the target value for the sampled s: r + γ max_a&apos; Q̂(s&apos;, a&apos;; w‾ )
-- Use stochastic gradient descent to update the network weights</dc:description>
+- Use stochastic gradient descent to update the network weights</technical:algorithm>
         <rdfs:label xml:lang="en">Fixed Q-targets</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1484,7 +1506,8 @@ Slight change to computation of target value:
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HumanLevelControlThroughDeepReinforcementLearning">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
         <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#VolodymyrMnih"/>
-        <url xml:lang="en">https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf</url>
+        <technical:sourceCode xml:lang="en">https://sites.google.com/a/deepmind.com/dqn/</technical:sourceCode>
+        <technical:url xml:lang="en">https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf</technical:url>
         <rdfs:label xml:lang="en">Human-Level Control through Deep Reinforcement Learning</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://deepmind.com/research/publications/human-level-control-through-deep-reinforcement-learning/</rdfs:seeAlso>
     </owl:NamedIndividual>
@@ -1543,6 +1566,8 @@ Slight change to computation of target value:
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MaximizationBias">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
+        <dc:description xml:lang="en">Max of the estimated state-action values can be a biased estimate of
+the max</dc:description>
         <rdfs:label xml:lang="en">Maximization bias</rdfs:label>
     </owl:NamedIndividual>
     
