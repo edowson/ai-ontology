@@ -1687,6 +1687,7 @@ Slight change to computation of target value:
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#LeemonCBairdIII">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <technical:url xml:lang="en">http://leemon.com/</technical:url>
         <rdfs:label xml:lang="en">Leemon C. Baird III</rdfs:label>
     </owl:NamedIndividual>
     
