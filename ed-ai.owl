@@ -1385,7 +1385,7 @@ Option 2: Use mean as baseline (more stable)</technical:algorithm>
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#AReductionOfImitationLearningAndStructuredPredictionToNoRegretOnlineLearning"/>
         <technical:equation xml:lang="en">Error at time t with probability ϵ
-E[Total errors] ≤ (T + (T − 1) + (T − 2) . . . + 1) ∝ ϵT^2</technical:equation>
+E[Total errors] ≤ ϵ (T + (T − 1) + (T − 2) . . . + 1) ∝ ϵT^2</technical:equation>
         <rdfs:label xml:lang="en">Compounding Errors</rdfs:label>
     </owl:NamedIndividual>
     
