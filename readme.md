@@ -12,18 +12,18 @@ The AI/RL ontology project was started to help keep up with the pace of AI/RL de
 
 Load the `ed-ai.owl` file and start a reasoner.
 
-You can update the ontology or browse the sample RL instances, to answer questions such as:
+You can update the ontology or browse the sample RL instances, to perform queries such as:
 
-Problems encounters in reinforcement learning:
+- Problems encountered in reinforcement learning:
 ![rl-problem-compounding-errors.png](image/protege/rl-problem-compounding-errors.png)
 
-List of RL techniques for on-policy learning:
+- List of RL techniques for on-policy learning:
 ![rl-technique-learning-technique-on-policy-evaluation.png](image/protege/rl-technique-learning-technique-on-policy-evaluation.png)
 
-List of Q-learning algorithms and their properties:
+- List of Q-learning algorithms and their properties:
 ![rl-algorithm-qlearning-algorithm-dqn.png](image/protege/rl-algorithm-qlearning-algorithm-dqn.png)
 
-List of papers, authors and the algorithms and techniques described in those papers:
+- List of papers, authors and the algorithms and techniques described in those papers:
 ![rl-paper-human-level-control-through-deep-reinforcement-learning.png](image/protege/rl-paper-human-level-control-through-deep-reinforcement-learning.png)
 
 
