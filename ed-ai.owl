@@ -1570,9 +1570,14 @@ Optimize loss function by stochastic gradient descent (SGD)</dc:description>
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DoublyRobustOffPolicyValueEvaluationForReinforcementLearning"/>
         <technical:isUsedToSolve rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ErrorInEstimatesOfObservedPolicy"/>
         <technical:isUsedToSolve rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#PoorApproximateModel"/>
+        <rdfs:comment xml:lang="en">Doubly Robust (DR) = Approximate Model (AM) + Importance Sampling (IS)
+
+Using Weighted Doubly Robust (WDR) estimators over DR estimators can result in substantial gains in accuracy and performance improvement, in terms of MSE loss vs. number of episodes required.
+
+MAGIC estimators can have an order of magnitude improvement over WDR in some domains.</rdfs:comment>
         <rdfs:comment xml:lang="en">Robust to:
 - poor approximate model
-- error in estimates of πb</rdfs:comment>
+- error in estimates of observed policy πb</rdfs:comment>
         <rdfs:label xml:lang="en">Doubly Robust Estimator</rdfs:label>
     </owl:NamedIndividual>
     
