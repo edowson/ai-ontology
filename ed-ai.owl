@@ -1475,7 +1475,9 @@ Older Q-network w‾ is used to evaluate actions</dc:description>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#EpsilonGreedyExploration"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#FixedQTargets"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#FrameSkipping"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#HuberLossOnBellmanError"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#RewardClipping"/>
         <technical:algorithm xml:lang="en">DQN uses experience replay and fixed Q-targets
 Store transition (s_t , a_t , r_t+1 , s_t+1 ) in replay memory D
 Sample random mini-batch of transitions (s, a, r , s&apos; ) from D
@@ -1700,6 +1702,26 @@ Slight change to computation of target value:
         <rdfs:label xml:lang="en">Fixed Q-targets</rdfs:label>
     </owl:NamedIndividual>
     
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#FrameSkipping -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#FrameSkipping">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#FrameSkippingAndPreprocessingForDeepQNetworksOnAtari2600Games"/>
+        <rdfs:label xml:lang="en">Frame Skipping</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#FrameSkippingAndPreprocessingForDeepQNetworksOnAtari2600Games -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#FrameSkippingAndPreprocessingForDeepQNetworksOnAtari2600Games">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Technote"/>
+        <technical:url>https://danieltakeshi.github.io/2016/11/25/frame-skipping-and-preprocessing-for-deep-q-networks-on-atari-2600-games/</technical:url>
+        <rdfs:label xml:lang="en">Frame Skipping and Pre-Processing for Deep Q-Networks on Atari 2600 Games</rdfs:label>
+    </owl:NamedIndividual>
+
 
 
     <!-- http://www.edowson.com/ontologies/2019/2/ai#GLIEEpsilonGreedyBanditAlgorithm -->
@@ -2263,6 +2285,18 @@ One method 1 : proportional (stochastic prioritization)</dc:description>
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ReinforcementLearning"/>
     </owl:NamedIndividual>
     
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#RewardClipping -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#RewardClipping">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+        <technical:isUsedToSolve rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TrainingStability"/>
+        <rdfs:comment xml:lang="en">Each game has different score scales. For example, in Pong, players can get 1 point when wining the play. Otherwise, players get -1 point. However, in SpaceInvaders, players get 10~30 points when defeating invaders. This difference would make training unstable. Thus Clipping Rewards technique clips scores, which all positive rewards are set +1 and all negative rewards are set -1.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reward Clipping</rdfs:label>
+        <rdfs:seeAlso>https://towardsdatascience.com/welcome-to-deep-reinforcement-learning-part-1-dqn-c3cab4d41b6b</rdfs:seeAlso>
+    </owl:NamedIndividual>
+
 
 
     <!-- http://www.edowson.com/ontologies/2019/2/ai#RoboticSurgery -->
