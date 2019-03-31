@@ -123,6 +123,33 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#canBeSolvedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#canBeSolvedBy">
+        <owl:equivalentProperty rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#isSolvedBy"/>
+        <owl:inverseOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#isUsedToSolve"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/idj#Issue"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">can be solved by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#describedIn -->
 
     <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#describedIn">
@@ -736,6 +763,14 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#AsynchronousMethod -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#AsynchronousMethod">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#Author -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Author">
@@ -1207,6 +1242,15 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#StochasticMethod">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
         <rdfs:label xml:lang="en">Stochastic Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#Task -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Task">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label xml:lang="en">Task</rdfs:label>
     </owl:Class>
     
 
@@ -1711,7 +1755,7 @@ Slight change to computation of target value:
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#FrameSkippingAndPreprocessingForDeepQNetworksOnAtari2600Games"/>
         <rdfs:label xml:lang="en">Frame Skipping</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.edowson.com/ontologies/2019/2/ai#FrameSkippingAndPreprocessingForDeepQNetworksOnAtari2600Games -->
@@ -1721,7 +1765,7 @@ Slight change to computation of target value:
         <technical:url>https://danieltakeshi.github.io/2016/11/25/frame-skipping-and-preprocessing-for-deep-q-networks-on-atari-2600-games/</technical:url>
         <rdfs:label xml:lang="en">Frame Skipping and Pre-Processing for Deep Q-Networks on Atari 2600 Games</rdfs:label>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.edowson.com/ontologies/2019/2/ai#GLIEEpsilonGreedyBanditAlgorithm -->
@@ -1798,7 +1842,7 @@ Slight change to computation of target value:
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HalfCheetah">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#LearningProblem"/>
-        <rdfs:label xml:lang="en">HalfCheetah</rdfs:label>
+        <rdfs:label xml:lang="en">Half-Cheetah</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2003,6 +2047,15 @@ the max</dc:description>
         <technical:url xml:lang="en">https://www.aaai.org/Papers/AAAI/2008/AAAI08-227.pdf</technical:url>
         <rdfs:label xml:lang="en">Maximum Entropy Inverse Reinforcement Learning</rdfs:label>
         <time:year xml:lang="en">2008</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#MazeNavigation -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MazeNavigation">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#LearningProblem"/>
+        <rdfs:label xml:lang="en">Maze Navigation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2296,7 +2349,7 @@ One method 1 : proportional (stochastic prioritization)</dc:description>
         <rdfs:label xml:lang="en">Reward Clipping</rdfs:label>
         <rdfs:seeAlso>https://towardsdatascience.com/welcome-to-deep-reinforcement-learning-part-1-dqn-c3cab4d41b6b</rdfs:seeAlso>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.edowson.com/ontologies/2019/2/ai#RoboticSurgery -->
