@@ -767,6 +767,7 @@
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#AsynchronousMethod">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+        <rdfs:label xml:lang="en">Asynchronous Method</rdfs:label>
     </owl:Class>
     
 
@@ -839,6 +840,15 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Constraint">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
         <rdfs:label xml:lang="en">Constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#ContinuousControl -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#ContinuousControl">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Control"/>
+        <rdfs:label xml:lang="en">Continuous control</rdfs:label>
     </owl:Class>
     
 
@@ -1346,36 +1356,11 @@
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#AReductionOfImitationLearningAndStructuredPredictionToNoRegretOnlineLearning -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#AReductionOfImitationLearningAndStructuredPredictionToNoRegretOnlineLearning">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#StephaneRoss"/>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1011.0686</technical:url>
-        <rdfs:label xml:lang="en">A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning</rdfs:label>
-        <time:year xml:lang="en">2011</time:year>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#ASimpleNeuralAttentiveMetaLearner -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ASimpleNeuralAttentiveMetaLearner">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#NikhilMishra"/>
-        <dc:description xml:lang="en">Deep neural networks excel in regimes with large amounts of data, but tend to struggle when data is scarce or when they need to adapt quickly to changes in the task. In response, recent work in meta-learning proposes training a meta-learner on a distribution of similar tasks, in the hopes of generalization to novel but related tasks by learning a high-level strategy that captures the essence of the problem it is asked to solve. However, many recent meta-learning approaches are extensively hand-designed, either using architectures specialized to a particular application, or hard-coding algorithmic components that constrain how the meta-learner solves the task. We propose a class of simple and generic meta-learner architectures that use a novel combination of temporal convolutions and soft attention; the former to aggregate information from past experience and the latter to pinpoint specific pieces of information. In the most extensive set of meta-learning experiments to date, we evaluate the resulting Simple Neural AttentIve Learner (or SNAIL) on several heavily-benchmarked tasks. On all tasks, in both supervised and reinforcement learning, SNAIL attains state-of-the-art performance by significant margins.</dc:description>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1707.03141</technical:url>
-        <rdfs:label xml:lang="en">A Simple Neural Attentive Meta-Learner</rdfs:label>
-        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.edowson.com/ontologies/2019/2/ai#AdvantageFunction -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#AdvantageFunction">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
-        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#AdvantageUpdating"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#AdvantageUpdating"/>
         <dc:description xml:lang="en">Advantage updating is a direct learning technique; it does not require a model to be given or learned. It is incremental, requiring only a
 constant amount of calculation per time step, independent of the number of possible actions, possible outcomes from a given action, or number of states. Analysis and simulation indicate that advantage updating is applicable to reinforcement learning systems working in continuous time (or discrete time with small time steps) for which Q-learning is not applicable.</dc:description>
         <technical:algorithm xml:lang="en">If you want to make decisions in the world, there might be some states that are better or worse and they&apos;re just going to have a higer or lowe value. But what you really want to be able to do is to figure out what the right action is, to take in a particular state.
@@ -1391,18 +1376,6 @@ Option 1: Force A(s, a) = 0 if a is action taken
 Option 2: Use mean as baseline (more stable)</technical:algorithm>
         <technical:equation xml:lang="en">Aπ(s,a) = Qπ(s,a) - Vπ(s,a)</technical:equation>
         <rdfs:label xml:lang="en">Advantage Function</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#AdvantageUpdating -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#AdvantageUpdating">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#LeemonCBairdIII"/>
-        <technical:url>http://leemon.com/papers/1993b.pdf</technical:url>
-        <rdfs:label xml:lang="en">Advantage Updating</rdfs:label>
-        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1993</time:year>
     </owl:NamedIndividual>
     
 
@@ -1478,7 +1451,7 @@ Option 2: Use mean as baseline (more stable)</technical:algorithm>
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#CompoundingErrors">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
-        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#AReductionOfImitationLearningAndStructuredPredictionToNoRegretOnlineLearning"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#AReductionOfImitationLearningAndStructuredPredictionToNoRegretOnlineLearning"/>
         <technical:equation xml:lang="en">Error at time t with probability ϵ
 E[Total errors] ≤ ϵ (T + (T − 1) + (T − 2) . . . + 1) ∝ ϵT^2</technical:equation>
         <rdfs:label xml:lang="en">Compounding Errors</rdfs:label>
@@ -1490,7 +1463,7 @@ E[Total errors] ≤ ϵ (T + (T − 1) + (T − 2) . . . + 1) ∝ ϵT^2</technica
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DDQN">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#QLearningAlgorithm"/>
-        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DeepReinforcementLearningWithDoubleQLearning"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#DeepReinforcementLearningWithDoubleQLearning"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DifferentWeightsToSelectAndEvaluateActions"/>
         <dc:description xml:lang="en">To help avoid maximization bias, use different weights to select and evaluate actions
 Current Q-network w is used to select actions
@@ -1515,7 +1488,7 @@ Older Q-network w‾ is used to evaluate actions</dc:description>
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DQN">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#QLearningAlgorithm"/>
-        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#HumanLevelControlThroughDeepReinforcementLearning"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#HumanLevelControlThroughDeepReinforcementLearning"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#EpsilonGreedyExploration"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#FixedQTargets"/>
@@ -1551,23 +1524,21 @@ under its induced state distribution.</dc:description>
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DavidSilver -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DavidSilver">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <technical:email xml:lang="en">davidsilver@google.com</technical:email>
+        <rdfs:label xml:lang="en">David Silver</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#DecayingEpsilonGreedyBanditAlgorithm -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DecayingEpsilonGreedyBanditAlgorithm">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#BanditAlgorithm"/>
         <rdfs:label xml:lang="en">Decaying ϵ-greedy bandit algorithm</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#DeepDroneRacingLearningAgileFlightInDynamicEnvironments -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DeepDroneRacingLearningAgileFlightInDynamicEnvironments">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#EliaKaufmann"/>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1806.08548</technical:url>
-        <rdfs:label xml:lang="en">Deep Drone Racing: Learning Agile Flight in Dynamic Environments</rdfs:label>
-        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
     </owl:NamedIndividual>
     
 
@@ -1587,18 +1558,6 @@ Optimize loss function by stochastic gradient descent (SGD)</dc:description>
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#DeepReinforcementLearningWithDoubleQLearning -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DeepReinforcementLearningWithDoubleQLearning">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#HadoVanHasselt"/>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1509.06461</technical:url>
-        <rdfs:label xml:lang="en">Deep Reinforcement Learning with Double Q-learning</rdfs:label>
-        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</time:year>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.edowson.com/ontologies/2019/2/ai#DifferentWeightsToSelectAndEvaluateActions -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DifferentWeightsToSelectAndEvaluateActions">
@@ -1613,7 +1572,7 @@ Optimize loss function by stochastic gradient descent (SGD)</dc:description>
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DoublyRobustEstimator">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
-        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DoublyRobustOffPolicyValueEvaluationForReinforcementLearning"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#DoublyRobustOffPolicyValueEvaluationForReinforcementLearning"/>
         <technical:isUsedToSolve rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ErrorInEstimatesOfObservedPolicy"/>
         <technical:isUsedToSolve rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#PoorApproximateModel"/>
         <rdfs:comment xml:lang="en">Doubly Robust (DR) = Approximate Model (AM) + Importance Sampling (IS)
@@ -1625,17 +1584,6 @@ MAGIC estimators can have an order of magnitude improvement over WDR in some dom
 - poor approximate model
 - error in estimates of observed policy πb</rdfs:comment>
         <rdfs:label xml:lang="en">Doubly Robust Estimator</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#DoublyRobustOffPolicyValueEvaluationForReinforcementLearning -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DoublyRobustOffPolicyValueEvaluationForReinforcementLearning">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <dc:description xml:lang="en">We study the problem of off-policy value evaluation in reinforcement learning (RL), where one aims to estimate the value of a new policy based on data collected by a different policy. This problem is often a critical step when applying RL in real-world problems. Despite its importance, existing general methods either have uncontrolled bias or suffer high variance. In this work, we extend the doubly robust estimator for bandits to sequential decision-making problems, which gets the best of both worlds: it is guaranteed to be unbiased and can have a much lower variance than the popular importance sampling estimators. We demonstrate the estimator&apos;s accuracy in several benchmark problems, and illustrate its use as a subroutine in safe policy improvement. We also provide theoretical results on the hardness of the problem, and show that our estimator can match the lower bound in certain scenarios.</dc:description>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1511.03722</technical:url>
-        <rdfs:label xml:lang="en">Doubly Robust Off-policy Value Evaluation for Reinforcement Learning</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1685,7 +1633,7 @@ MAGIC estimators can have an order of magnitude improvement over WDR in some dom
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ErrorInEstimatesOfObservedPolicy">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
-        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DoublyRobustOffPolicyValueEvaluationForReinforcementLearning"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#DoublyRobustOffPolicyValueEvaluationForReinforcementLearning"/>
         <rdfs:label xml:lang="en">Error in estimates of observed policy πb</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1787,19 +1735,6 @@ Slight change to computation of target value:
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#GenerativeAdversarialImitationLearning -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#GenerativeAdversarialImitationLearning">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#JonathanHo"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#StefanoErmon"/>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1606.03476</technical:url>
-        <rdfs:label xml:lang="en">Generative Adversarial Imitation Learning</rdfs:label>
-        <time:year xml:lang="en">2016</time:year>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.edowson.com/ontologies/2019/2/ai#Go -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Go">
@@ -1813,7 +1748,7 @@ Slight change to computation of target value:
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#GrBAL">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MetaRLAlgorithm"/>
-        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#LearningToAdaptInDynamicRealWorldEnvironmentsThroughMetaReinforcementLearning"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#LearningToAdaptInDynamicRealWorldEnvironmentsThroughMetaReinforcementLearning"/>
         <rdfs:label xml:lang="en">Gradient-Based Adaptive Learner</rdfs:label>
         <skos:altLabel xml:lang="en">GrBAL</skos:altLabel>
     </owl:NamedIndividual>
@@ -1870,20 +1805,6 @@ Slight change to computation of target value:
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HuberLossOnBellmanError">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#LossFunction"/>
         <rdfs:label xml:lang="en">Huber loss on Bellman error</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#HumanLevelControlThroughDeepReinforcementLearning -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HumanLevelControlThroughDeepReinforcementLearning">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#VolodymyrMnih"/>
-        <technical:sourceCode xml:lang="en">https://sites.google.com/a/deepmind.com/dqn/</technical:sourceCode>
-        <technical:url xml:lang="en">https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf</technical:url>
-        <rdfs:label xml:lang="en">Human-Level Control through Deep Reinforcement Learning</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://deepmind.com/research/publications/human-level-control-through-deep-reinforcement-learning/</rdfs:seeAlso>
-        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</time:year>
     </owl:NamedIndividual>
     
 
@@ -1975,22 +1896,6 @@ Slight change to computation of target value:
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#LearningToAdaptInDynamicRealWorldEnvironmentsThroughMetaReinforcementLearning -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#LearningToAdaptInDynamicRealWorldEnvironmentsThroughMetaReinforcementLearning">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#AnushaNagabandi"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#IgnasiClavera"/>
-        <dc:description xml:lang="en">Although reinforcement learning methods can achieve impressive results in simulation, the real world presents two major challenges: generating samples is exceedingly expensive, and unexpected perturbations or unseen situations cause proficient but specialized policies to fail at test time. Given that it is impractical to train separate policies to accommodate all situations the agent may see in the real world, this work proposes to learn how to quickly and effectively adapt online to new tasks. To enable sample-efficient learning, we consider learning online adaptation in the context of model-based reinforcement learning. Our approach uses meta-learning to train a dynamics model prior such that, when combined with recent data, this prior can be rapidly adapted to the local context. Our experiments demonstrate online adaptation for continuous control tasks on both simulated and real-world agents. We first show simulated agents adapting their behavior online to novel terrains, crippled body parts, and highly-dynamic environments. We also illustrate the importance of incorporating online adaptation into autonomous agents that operate in the real world by applying our method to a real dynamic legged millirobot. We demonstrate the agent&apos;s learned ability to quickly adapt online to a missing leg, adjust to novel terrains and slopes, account for miscalibration or errors in pose estimation, and compensate for pulling payloads.</dc:description>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1803.11347</technical:url>
-        <rdfs:comment xml:lang="en">In this case, we&apos;re adapting the model online, as opposed to adaptive control.</rdfs:comment>
-        <rdfs:label xml:lang="en">Learning to Adapt in Dynamic, Real-World Environments Through Meta-Reinforcement Learning</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://openreview.net/forum?id=HyztsoC5Y7</rdfs:seeAlso>
-        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</time:year>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.edowson.com/ontologies/2019/2/ai#LearningToLearnWithGradients -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#LearningToLearnWithGradients">
@@ -2028,6 +1933,15 @@ We show how these methods can be extended for applications in motor control by c
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#MarcoAWiering -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MarcoAWiering">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Marco A. Wiering</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#MaximizationBias -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MaximizationBias">
@@ -2035,18 +1949,6 @@ We show how these methods can be extended for applications in motor control by c
         <dc:description xml:lang="en">Max of the estimated state-action values can be a biased estimate of
 the max</dc:description>
         <rdfs:label xml:lang="en">Maximization bias</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#MaximumEntropyInverseReinforcementLearning -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MaximumEntropyInverseReinforcementLearning">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#BrianDZiebart"/>
-        <technical:url xml:lang="en">https://www.aaai.org/Papers/AAAI/2008/AAAI08-227.pdf</technical:url>
-        <rdfs:label xml:lang="en">Maximum Entropy Inverse Reinforcement Learning</rdfs:label>
-        <time:year xml:lang="en">2008</time:year>
     </owl:NamedIndividual>
     
 
@@ -2065,36 +1967,8 @@ the max</dc:description>
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MetaLearning">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#LearningTechnique"/>
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#LearningToLearnWithGradients"/>
-        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MetaLearningAndUniversality"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#MetaLearningAndUniversality"/>
         <rdfs:label xml:lang="en">Meta-Learning</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#MetaLearningAndUniversality -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MetaLearningAndUniversality">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ChelseaFinn"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#SergeyLevine"/>
-        <dc:description xml:lang="en">Learning to learn is a powerful paradigm for enabling models to learn from data more effectively and efficiently. A popular approach to meta-learning is to train a recurrent model to read in a training dataset as input and output the parameters of a learned model, or output predictions for new test inputs. Alternatively, a more recent approach to meta-learning aims to acquire deep representations that can be effectively fine-tuned, via standard gradient descent, to new tasks. In this paper, we consider the meta-learning problem from the perspective of universality, formalizing the notion of learning algorithm approximation and comparing the expressive power of the aforementioned recurrent models to the more recent approaches that embed gradient descent into the meta-learner. In particular, we seek to answer the following question: does deep representation combined with standard gradient descent have sufficient capacity to approximate any learning algorithm? We find that this is indeed true, and further find, in our experiments, that gradient-based meta-learning consistently leads to learning strategies that generalize more widely compared to those represented by recurrent models.</dc:description>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1710.11622</technical:url>
-        <rdfs:label xml:lang="en">Meta-Learning and Universality: Deep Representations and Gradient Descent can Approximate any Learning Algorithm</rdfs:label>
-        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#ModelAgnosticMetaLearningForFastAdaptationOfDeepNetworks -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ModelAgnosticMetaLearningForFastAdaptationOfDeepNetworks">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ChelseaFinn"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#SergeyLevine"/>
-        <technical:sourceCode xml:lang="en">https://github.com/cbfinn/maml</technical:sourceCode>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1703.03400</technical:url>
-        <rdfs:label xml:lang="en">Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks</rdfs:label>
-        <time:year xml:lang="en">2017</time:year>
     </owl:NamedIndividual>
     
 
@@ -2261,18 +2135,6 @@ One method 1 : proportional (stochastic prioritization)</dc:description>
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#PrioritizedExperienceReplay -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#PrioritizedExperienceReplay">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TomSchaul"/>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1511.05952</technical:url>
-        <rdfs:label xml:lang="en">Prioritized Experience Replay</rdfs:label>
-        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</time:year>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.edowson.com/ontologies/2019/2/ai#ProportionalStochasticPrioritization -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ProportionalStochasticPrioritization">
@@ -2316,7 +2178,7 @@ One method 1 : proportional (stochastic prioritization)</dc:description>
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ReBAL">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MetaRLAlgorithm"/>
-        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#LearningToAdaptInDynamicRealWorldEnvironmentsThroughMetaReinforcementLearning"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#LearningToAdaptInDynamicRealWorldEnvironmentsThroughMetaReinforcementLearning"/>
         <rdfs:label xml:lang="en">Recurrence-Based Adaptive Learner</rdfs:label>
         <skos:altLabel xml:lang="en">ReBAL</skos:altLabel>
     </owl:NamedIndividual>
@@ -2438,6 +2300,16 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#TimothyPLillicrap -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#TimothyPLillicrap">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <technical:email xml:lang="en">countzero@google.com</technical:email>
+        <rdfs:label xml:lang="en">Timothy P. Lillicrap</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#TomSchaul -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#TomSchaul">
@@ -2489,7 +2361,210 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#VolodymyrMnih">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <technical:email xml:lang="en">vmnih@google.com</technical:email>
         <rdfs:label xml:lang="en">Volodymyr Mnih</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#AReductionOfImitationLearningAndStructuredPredictionToNoRegretOnlineLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#AReductionOfImitationLearningAndStructuredPredictionToNoRegretOnlineLearning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#StephaneRoss"/>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1011.0686</technical:url>
+        <rdfs:label xml:lang="en">A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning</rdfs:label>
+        <time:year xml:lang="en">2011</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#ASimpleNeuralAttentiveMetaLearner -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#ASimpleNeuralAttentiveMetaLearner">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#NikhilMishra"/>
+        <dc:description xml:lang="en">Deep neural networks excel in regimes with large amounts of data, but tend to struggle when data is scarce or when they need to adapt quickly to changes in the task. In response, recent work in meta-learning proposes training a meta-learner on a distribution of similar tasks, in the hopes of generalization to novel but related tasks by learning a high-level strategy that captures the essence of the problem it is asked to solve. However, many recent meta-learning approaches are extensively hand-designed, either using architectures specialized to a particular application, or hard-coding algorithmic components that constrain how the meta-learner solves the task. We propose a class of simple and generic meta-learner architectures that use a novel combination of temporal convolutions and soft attention; the former to aggregate information from past experience and the latter to pinpoint specific pieces of information. In the most extensive set of meta-learning experiments to date, we evaluate the resulting Simple Neural AttentIve Learner (or SNAIL) on several heavily-benchmarked tasks. On all tasks, in both supervised and reinforcement learning, SNAIL attains state-of-the-art performance by significant margins.</dc:description>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1707.03141</technical:url>
+        <rdfs:label xml:lang="en">A Simple Neural Attentive Meta-Learner</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#AdvantageUpdating -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#AdvantageUpdating">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#LeemonCBairdIII"/>
+        <technical:url>http://leemon.com/papers/1993b.pdf</technical:url>
+        <rdfs:label xml:lang="en">Advantage Updating</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1993</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#AsynchronousMethodsForDeepReinforcementLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#AsynchronousMethodsForDeepReinforcementLearning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DavidSilver"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TimothyPLillicrap"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#VolodymyrMnih"/>
+        <technical:url>https://arxiv.org/abs/1602.01783</technical:url>
+        <rdfs:label xml:lang="en">Asynchronous Methods for Deep Reinforcement Learning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#ContinuousControlWithDeepReinforcementLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#ContinuousControlWithDeepReinforcementLearning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DavidSilver"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TimothyPLillicrap"/>
+        <rdfs:label xml:lang="en">Continuous control with deep reinforcement learning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#DeepDroneRacingLearningAgileFlightInDynamicEnvironments -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#DeepDroneRacingLearningAgileFlightInDynamicEnvironments">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#EliaKaufmann"/>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1806.08548</technical:url>
+        <rdfs:label xml:lang="en">Deep Drone Racing: Learning Agile Flight in Dynamic Environments</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#DeepReinforcementLearningWithDoubleQLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#DeepReinforcementLearningWithDoubleQLearning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#HadoVanHasselt"/>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1509.06461</technical:url>
+        <rdfs:label xml:lang="en">Deep Reinforcement Learning with Double Q-learning</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#DoublyRobustOffPolicyValueEvaluationForReinforcementLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#DoublyRobustOffPolicyValueEvaluationForReinforcementLearning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <dc:description xml:lang="en">We study the problem of off-policy value evaluation in reinforcement learning (RL), where one aims to estimate the value of a new policy based on data collected by a different policy. This problem is often a critical step when applying RL in real-world problems. Despite its importance, existing general methods either have uncontrolled bias or suffer high variance. In this work, we extend the doubly robust estimator for bandits to sequential decision-making problems, which gets the best of both worlds: it is guaranteed to be unbiased and can have a much lower variance than the popular importance sampling estimators. We demonstrate the estimator&apos;s accuracy in several benchmark problems, and illustrate its use as a subroutine in safe policy improvement. We also provide theoretical results on the hardness of the problem, and show that our estimator can match the lower bound in certain scenarios.</dc:description>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1511.03722</technical:url>
+        <rdfs:label xml:lang="en">Doubly Robust Off-policy Value Evaluation for Reinforcement Learning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#GenerativeAdversarialImitationLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#GenerativeAdversarialImitationLearning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#JonathanHo"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#StefanoErmon"/>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1606.03476</technical:url>
+        <rdfs:label xml:lang="en">Generative Adversarial Imitation Learning</rdfs:label>
+        <time:year xml:lang="en">2016</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#HumanLevelControlThroughDeepReinforcementLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#HumanLevelControlThroughDeepReinforcementLearning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#VolodymyrMnih"/>
+        <technical:sourceCode xml:lang="en">https://sites.google.com/a/deepmind.com/dqn/</technical:sourceCode>
+        <technical:url xml:lang="en">https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf</technical:url>
+        <rdfs:label xml:lang="en">Human-Level Control through Deep Reinforcement Learning</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://deepmind.com/research/publications/human-level-control-through-deep-reinforcement-learning/</rdfs:seeAlso>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#LearningToAdaptInDynamicRealWorldEnvironmentsThroughMetaReinforcementLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#LearningToAdaptInDynamicRealWorldEnvironmentsThroughMetaReinforcementLearning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#AnushaNagabandi"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#IgnasiClavera"/>
+        <dc:description xml:lang="en">Although reinforcement learning methods can achieve impressive results in simulation, the real world presents two major challenges: generating samples is exceedingly expensive, and unexpected perturbations or unseen situations cause proficient but specialized policies to fail at test time. Given that it is impractical to train separate policies to accommodate all situations the agent may see in the real world, this work proposes to learn how to quickly and effectively adapt online to new tasks. To enable sample-efficient learning, we consider learning online adaptation in the context of model-based reinforcement learning. Our approach uses meta-learning to train a dynamics model prior such that, when combined with recent data, this prior can be rapidly adapted to the local context. Our experiments demonstrate online adaptation for continuous control tasks on both simulated and real-world agents. We first show simulated agents adapting their behavior online to novel terrains, crippled body parts, and highly-dynamic environments. We also illustrate the importance of incorporating online adaptation into autonomous agents that operate in the real world by applying our method to a real dynamic legged millirobot. We demonstrate the agent&apos;s learned ability to quickly adapt online to a missing leg, adjust to novel terrains and slopes, account for miscalibration or errors in pose estimation, and compensate for pulling payloads.</dc:description>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1803.11347</technical:url>
+        <rdfs:comment xml:lang="en">In this case, we&apos;re adapting the model online, as opposed to adaptive control.</rdfs:comment>
+        <rdfs:label xml:lang="en">Learning to Adapt in Dynamic, Real-World Environments Through Meta-Reinforcement Learning</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://openreview.net/forum?id=HyztsoC5Y7</rdfs:seeAlso>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#MaximumEntropyInverseReinforcementLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#MaximumEntropyInverseReinforcementLearning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#BrianDZiebart"/>
+        <technical:url xml:lang="en">https://www.aaai.org/Papers/AAAI/2008/AAAI08-227.pdf</technical:url>
+        <rdfs:label xml:lang="en">Maximum Entropy Inverse Reinforcement Learning</rdfs:label>
+        <time:year xml:lang="en">2008</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#MetaLearningAndUniversality -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#MetaLearningAndUniversality">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ChelseaFinn"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#SergeyLevine"/>
+        <dc:description xml:lang="en">Learning to learn is a powerful paradigm for enabling models to learn from data more effectively and efficiently. A popular approach to meta-learning is to train a recurrent model to read in a training dataset as input and output the parameters of a learned model, or output predictions for new test inputs. Alternatively, a more recent approach to meta-learning aims to acquire deep representations that can be effectively fine-tuned, via standard gradient descent, to new tasks. In this paper, we consider the meta-learning problem from the perspective of universality, formalizing the notion of learning algorithm approximation and comparing the expressive power of the aforementioned recurrent models to the more recent approaches that embed gradient descent into the meta-learner. In particular, we seek to answer the following question: does deep representation combined with standard gradient descent have sufficient capacity to approximate any learning algorithm? We find that this is indeed true, and further find, in our experiments, that gradient-based meta-learning consistently leads to learning strategies that generalize more widely compared to those represented by recurrent models.</dc:description>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1710.11622</technical:url>
+        <rdfs:label xml:lang="en">Meta-Learning and Universality: Deep Representations and Gradient Descent can Approximate any Learning Algorithm</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#ModelAgnosticMetaLearningForFastAdaptationOfDeepNetworks -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#ModelAgnosticMetaLearningForFastAdaptationOfDeepNetworks">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ChelseaFinn"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#SergeyLevine"/>
+        <technical:sourceCode xml:lang="en">https://github.com/cbfinn/maml</technical:sourceCode>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1703.03400</technical:url>
+        <rdfs:label xml:lang="en">Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks</rdfs:label>
+        <time:year xml:lang="en">2017</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#PrioritizedExperienceReplay -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#PrioritizedExperienceReplay">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TomSchaul"/>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1511.05952</technical:url>
+        <rdfs:label xml:lang="en">Prioritized Experience Replay</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#ReinforcementLearningInContinuousActionSpaces -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#ReinforcementLearningInContinuousActionSpaces">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#HadoVanHasselt"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MarcoAWiering"/>
+        <rdfs:label xml:lang="en">Reinforcement Learning in Continuous Action Spaces</rdfs:label>
     </owl:NamedIndividual>
     
 
