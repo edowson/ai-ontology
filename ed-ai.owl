@@ -565,6 +565,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DeterministicPolicyGradientAlgorithm -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DeterministicPolicyGradientAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <rdfs:label xml:lang="en">Deterministic Policy Gradient Algorithm</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#Engineering -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Engineering">
@@ -1459,6 +1468,21 @@ E[Total errors] ≤ ϵ (T + (T − 1) + (T − 2) . . . + 1) ∝ ϵT^2</technica
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DDPG -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DDPG">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DeterministicPolicyGradientAlgorithm"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#ContinuousControlWithDeepReinforcementLearning"/>
+        <dc:description xml:lang="en">We adapt the ideas underlying the success of Deep Q-Learning to the continuous action domain. We present an actor-critic, model-free algorithm based on the deterministic policy gradient that can operate over continuous action spaces. Using the same learning algorithm, network architecture and hyper-parameters, our algorithm robustly solves more than 20 simulated physics tasks, including classic problems such as cartpole swing-up, dexterous manipulation, legged locomotion and car driving. Our algorithm is able to find policies whose performance is competitive with those found by a planning algorithm with full access to the dynamics
+of the domain and its derivatives. We further demonstrate that for many of the tasks the algorithm can learn policies &quot;end-to-end&quot;: directly from raw pixel inputs.</dc:description>
+        <technical:url>https://arxiv.org/abs/1509.02971</technical:url>
+        <rdfs:comment xml:lang="en">Deep DPG</rdfs:comment>
+        <rdfs:label xml:lang="en">DDPG</rdfs:label>
+        <time:year xml:lang="en">2016</time:year>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#DDQN -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DDQN">
@@ -1471,6 +1495,17 @@ Older Q-network w‾ is used to evaluate actions</dc:description>
         <rdfs:comment xml:lang="en">DDQN has a significant performance improvement over DQN. See (van Hasselt, Guez, Silver, 2015).</rdfs:comment>
         <rdfs:label xml:lang="en">Double DQN</rdfs:label>
         <skos:altLabel xml:lang="en">DDQN</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DPG -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DPG">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DeterministicPolicyGradientAlgorithm"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#DeterministicPolicyGradientAlgorithms"/>
+        <rdfs:comment xml:lang="en">Deterministic Policy Gradient</rdfs:comment>
+        <rdfs:label xml:lang="en">DPG</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2448,6 +2483,19 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
         <technical:url xml:lang="en">https://arxiv.org/abs/1509.06461</technical:url>
         <rdfs:label xml:lang="en">Deep Reinforcement Learning with Double Q-learning</rdfs:label>
         <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#DeterministicPolicyGradientAlgorithms -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#DeterministicPolicyGradientAlgorithms">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DavidSilver"/>
+        <dc:description xml:lang="en">In this paper we consider deterministic policy gradient algorithms for reinforcement learning with continuous actions. The deterministic policy gradient has a particularly appealing form: it is the expected gradient of the action-value function. This simple form means that the deterministic policy gradient can be estimated much more efficiently than the usual stochastic policy gradient. To ensure adequate exploration, we introduce an off-policy actor-critic algorithm that learns a deterministic target policy from an exploratory behaviour policy. We demonstrate that deterministic policy gradient algorithms can significantly outperform their stochastic counter-parts in high-dimensional action spaces.</dc:description>
+        <technical:url>http://proceedings.mlr.press/v32/silver14.pdf</technical:url>
+        <rdfs:label xml:lang="en">Deterministic Policy Gradient Algorithms</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</time:year>
     </owl:NamedIndividual>
     
 
