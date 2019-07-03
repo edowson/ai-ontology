@@ -1354,6 +1354,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/technical#simulator -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/technical#simulator">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label>Simulator</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1450,6 +1459,7 @@ Option 2: Use mean as baseline (more stable)</technical:algorithm>
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ChelseaFinn">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <technical:email xml:lang="en">cbfinn@cs.stanford.edu</technical:email>
         <technical:url xml:lang="en">http://people.eecs.berkeley.edu/~cbfinn/</technical:url>
         <rdfs:label xml:lang="en">Chelsea Finn</rdfs:label>
     </owl:NamedIndividual>
@@ -1922,6 +1932,15 @@ Slight change to computation of target value:
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#JohnSchulman -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#JohnSchulman">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">John Schulman</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#JonathanHo -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#JonathanHo">
@@ -2078,6 +2097,7 @@ the max</dc:description>
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#NikhilMishra">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <technical:url xml:lang="en">https://nikhilmishra000.github.io</technical:url>
         <rdfs:label>Nikhil Mishra</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2148,6 +2168,15 @@ Update p_i every minibatch, Set p_i = 0 for new tuples
 One method 1 : proportional (stochastic prioritization)</dc:description>
         <rdfs:label xml:lang="en">Prioritized Experience Replay</rdfs:label>
         <skos:altLabel xml:lang="en">PER</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Pieter_Abbeel -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Pieter_Abbeel">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Pieter Abbeel</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2402,6 +2431,94 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#XiChen -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#XiChen">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Xi Chen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#YanDuan -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#YanDuan">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Yan Duan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#a-brief-survey-of-deep-reinforcement-learning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#a-brief-survey-of-deep-reinforcement-learning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#kai-arulkumaran"/>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1708.05866</technical:url>
+        <rdfs:label xml:lang="en">A Brief Survey of Deep Reinforcement Learning</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#alexey-dosovitskiy -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#alexey-dosovitskiy">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Alexey Dosovitskiy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#carla -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#carla">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#simulator"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#carla-an-open-urban-driving-simulator"/>
+        <rdfs:label xml:lang="en">CARLA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#carla-an-open-urban-driving-simulator -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#carla-an-open-urban-driving-simulator">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#alexey-dosovitskiy"/>
+        <dc:description xml:lang="en">We introduce CARLA, an open-source simulator for autonomous driving research. CARLA has been developed from the ground up to support development, training, and validation of autonomous urban driving systems. In addition to open-source code and protocols, CARLA provides open digital assets (urban layouts, buildings, vehicles) that were created for this purpose and can be used freely. The simulation platform supports flexible specification of sensor suites and environmental conditions. We use CARLA to study the performance of three approaches to autonomous driving: a classic modular pipeline, an end-to-end model trained via imitation learning, and an end-to-end model trained via reinforcement learning. The approaches are evaluated in controlled scenarios of increasing difficulty, and their performance is examined via metrics provided by CARLA, illustrating the platform&apos;s utility for autonomous driving research.</dc:description>
+        <technical:url>https://arxiv.org/abs/1711.03938</technical:url>
+        <rdfs:label xml:lang="en">CARLA - An Open Urban Driving Simulator</rdfs:label>
+        <rdfs:seeAlso>https://youtu.be/Hp8Dz-Zek2E</rdfs:seeAlso>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#kai-arulkumaran -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#kai-arulkumaran">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Kai Arulkumaran</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#raia-hadsell -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#raia-hadsell">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <dc:description>I am a research scientist on the Deep Learning team at DeepMind. I moved to London to join DeepMind in early 2014, feeling that my fundamental research interests in robotics, neural networks, and real world learning systems were well-aligned with the agenda of Demis, Shane, Koray, and other members of the original team. 
+
+I came to AI research obliquely. After an undergraduate degree in religion and philosophy from Reed College, I veered off-course (on-course?) and became a computer scientist. My PhD with Yann LeCun, at NYU, focused on machine learning using Siamese neural nets (often called a &apos;triplet loss&apos; today) and on deep learning for mobile robots in the wild. My thesis, &apos;Learning Long-range vision for offroad robots&apos;, was awarded the Outstanding Dissertation award in 2009. I spent a post-doc at CMU Robotics Institute, working with Drew Bagnell and Martial Hebert, and then became a research scientist at SRI International, at the Vision and Robotics group in Princeton, NJ.  
+
+My research at DeepMind focuses on a number of fundamental challenges in AGI, including continual and transfer learning, deep reinforcement learning, and neural models of navigation (see publications).</dc:description>
+        <technical:email>raia@google.com</technical:email>
+        <technical:url>http://raiahadsell.com</technical:url>
+        <rdfs:label xml:lang="en">Raia Hadsell</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/paper#AReductionOfImitationLearningAndStructuredPredictionToNoRegretOnlineLearning -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#AReductionOfImitationLearningAndStructuredPredictionToNoRegretOnlineLearning">
@@ -2422,6 +2539,7 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
         <dc:description xml:lang="en">Deep neural networks excel in regimes with large amounts of data, but tend to struggle when data is scarce or when they need to adapt quickly to changes in the task. In response, recent work in meta-learning proposes training a meta-learner on a distribution of similar tasks, in the hopes of generalization to novel but related tasks by learning a high-level strategy that captures the essence of the problem it is asked to solve. However, many recent meta-learning approaches are extensively hand-designed, either using architectures specialized to a particular application, or hard-coding algorithmic components that constrain how the meta-learner solves the task. We propose a class of simple and generic meta-learner architectures that use a novel combination of temporal convolutions and soft attention; the former to aggregate information from past experience and the latter to pinpoint specific pieces of information. In the most extensive set of meta-learning experiments to date, we evaluate the resulting Simple Neural AttentIve Learner (or SNAIL) on several heavily-benchmarked tasks. On all tasks, in both supervised and reinforcement learning, SNAIL attains state-of-the-art performance by significant margins.</dc:description>
         <technical:url xml:lang="en">https://arxiv.org/abs/1707.03141</technical:url>
         <rdfs:label xml:lang="en">A Simple Neural Attentive Meta-Learner</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://openreview.net/forum?id=B1DmUzWAW</rdfs:seeAlso>
         <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
     </owl:NamedIndividual>
     
@@ -2448,6 +2566,15 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
         <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#VolodymyrMnih"/>
         <technical:url>https://arxiv.org/abs/1602.01783</technical:url>
         <rdfs:label xml:lang="en">Asynchronous Methods for Deep Reinforcement Learning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#BenchmarkingDeepReinforcementLearningForContinuousControl -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#BenchmarkingDeepReinforcementLearningForContinuousControl">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <rdfs:label xml:lang="en">Benchmarking Deep Reinforcement Learning for Continuous Control</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2493,8 +2620,9 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
         <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DavidSilver"/>
         <dc:description xml:lang="en">In this paper we consider deterministic policy gradient algorithms for reinforcement learning with continuous actions. The deterministic policy gradient has a particularly appealing form: it is the expected gradient of the action-value function. This simple form means that the deterministic policy gradient can be estimated much more efficiently than the usual stochastic policy gradient. To ensure adequate exploration, we introduce an off-policy actor-critic algorithm that learns a deterministic target policy from an exploratory behaviour policy. We demonstrate that deterministic policy gradient algorithms can significantly outperform their stochastic counter-parts in high-dimensional action spaces.</dc:description>
-        <technical:url>http://proceedings.mlr.press/v32/silver14.pdf</technical:url>
+        <technical:url xml:lang="en">http://proceedings.mlr.press/v32/silver14.pdf</technical:url>
         <rdfs:label xml:lang="en">Deterministic Policy Gradient Algorithms</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://deepmind.com/research/publications/deterministic-policy-gradient-algorithms/</rdfs:seeAlso>
         <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</time:year>
     </owl:NamedIndividual>
     
