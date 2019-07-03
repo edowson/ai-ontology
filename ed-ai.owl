@@ -111,6 +111,34 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#isAn -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#isAn">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is an</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#authoredBy -->
 
     <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#authoredBy">
@@ -510,6 +538,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ActorCriticMethod -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ActorCriticMethod">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+        <rdfs:label xml:lang="en">Actor-Critic Method</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence">
@@ -628,6 +665,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ParallelTechnique -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ParallelTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+        <rdfs:label xml:lang="en">Parallel Technique</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#QLearningAlgorithm -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#QLearningAlgorithm">
@@ -687,6 +733,15 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#UnsupervisedLearning">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MachineLearning"/>
         <rdfs:label xml:lang="en">Unsupervised Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#UpdateTechnique -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#UpdateTechnique">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+        <rdfs:label xml:lang="en">Update Technique</rdfs:label>
     </owl:Class>
     
 
@@ -1478,17 +1533,30 @@ E[Total errors] ≤ ϵ (T + (T − 1) + (T − 2) . . . + 1) ∝ ϵT^2</technica
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#D4PG -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#D4PG">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DeterministicPolicyGradientAlgorithm"/>
+        <isAn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#OffPolicyActorCriticMethod"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DistributedDistributionalDeterministicPolicyGradients"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DistributedParallelActors"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DistributionalCriticUpdate"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#NStepReturns"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#PER"/>
+        <dc:description xml:lang="en">The approach taken in this work starts from the DDPG algorithm and includes a number of enhancements. These extensions, include a distributional critic update, the use of distributed parallel actors, N -step returns, and prioritization of the experience replay.</dc:description>
+        <rdfs:comment xml:lang="en">Distributed Distributional Deterministic Policy Gradients</rdfs:comment>
+        <rdfs:label xml:lang="en">D4PG</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#DDPG -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DDPG">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DeterministicPolicyGradientAlgorithm"/>
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#ContinuousControlWithDeepReinforcementLearning"/>
-        <dc:description xml:lang="en">We adapt the ideas underlying the success of Deep Q-Learning to the continuous action domain. We present an actor-critic, model-free algorithm based on the deterministic policy gradient that can operate over continuous action spaces. Using the same learning algorithm, network architecture and hyper-parameters, our algorithm robustly solves more than 20 simulated physics tasks, including classic problems such as cartpole swing-up, dexterous manipulation, legged locomotion and car driving. Our algorithm is able to find policies whose performance is competitive with those found by a planning algorithm with full access to the dynamics
-of the domain and its derivatives. We further demonstrate that for many of the tasks the algorithm can learn policies &quot;end-to-end&quot;: directly from raw pixel inputs.</dc:description>
-        <technical:url>https://arxiv.org/abs/1509.02971</technical:url>
         <rdfs:comment xml:lang="en">Deep DPG</rdfs:comment>
         <rdfs:label xml:lang="en">DDPG</rdfs:label>
-        <time:year xml:lang="en">2016</time:year>
     </owl:NamedIndividual>
     
 
@@ -1609,6 +1677,39 @@ Optimize loss function by stochastic gradient descent (SGD)</dc:description>
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
         <technical:helpsAvoid rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MaximizationBias"/>
         <rdfs:label xml:lang="en">Different weights to select and evaluate actions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DistributedDistributionalDeterministicPolicyGradients -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DistributedDistributionalDeterministicPolicyGradients">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#GabrielBarthMaron"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MatthewWHoffman"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TimothyPLillicrap"/>
+        <dc:description>This work adopts the very successful distributional perspective on reinforcement learning and adapts it to the continuous control setting. We combine this within a distributed framework for off-policy learning in order to develop what we call the Distributed Distributional Deep Deterministic Policy Gradient algorithm, D4PG. We also combine this technique with a number of additional, simple improvements such as the use of N-step returns and prioritized experience replay. Experimentally we examine the contribution of each of these individual components, and show how they interact, as well as their combined contributions. Our results show that across a wide variety of simple control tasks, difficult manipulation tasks, and a set of hard obstacle-based locomotion tasks the D4PG algorithm achieves state of the art performance.</dc:description>
+        <technical:url>https://arxiv.org/abs/1804.08617</technical:url>
+        <rdfs:label xml:lang="en">Distributed Distributional Deterministic Policy Gradients</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DistributedParallelActors -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DistributedParallelActors">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ParallelTechnique"/>
+        <rdfs:label xml:lang="en">Distributed Parallel Actors</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#DistributionalCriticUpdate -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DistributionalCriticUpdate">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#UpdateTechnique"/>
+        <rdfs:label xml:lang="en">Distributional Critic Update</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1776,6 +1877,16 @@ Slight change to computation of target value:
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#MonteCarloAlgorithm"/>
         <convergesToOptimalStateActionValueFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</convergesToOptimalStateActionValueFunction>
         <rdfs:label xml:lang="en">GLIE Monte-Carlo Control</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#GabrielBarthMaron -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#GabrielBarthMaron">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <technical:email xml:lang="en">gabrielbm@google.com</technical:email>
+        <rdfs:label xml:lang="en">Gabriel Barth-Maron</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1996,6 +2107,16 @@ We show how these methods can be extended for applications in motor control by c
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#MatthewWHoffman -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MatthewWHoffman">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <technical:email xml:lang="en">mwhoffman@google.com</technical:email>
+        <rdfs:label xml:lang="en">Matthew W. Hoffman</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#MaximizationBias -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MaximizationBias">
@@ -2093,6 +2214,15 @@ the max</dc:description>
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#NStepReturns -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#NStepReturns">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#UpdateTechnique"/>
+        <rdfs:label xml:lang="en">N-step returns</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#NikhilMishra -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#NikhilMishra">
@@ -2108,6 +2238,15 @@ the max</dc:description>
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#NonStationaryTargets">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Issue"/>
         <rdfs:label xml:lang="en">Non-stationary targets</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#OffPolicyActorCriticMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#OffPolicyActorCriticMethod">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ActorCriticMethod"/>
+        <rdfs:label xml:lang="en">Off-Policy Actor-Critic Method</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2585,7 +2724,10 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
         <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DavidSilver"/>
         <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#TimothyPLillicrap"/>
+        <dc:description xml:lang="en">We adapt the ideas underlying the success of Deep Q-Learning to the continuous action domain. We present an actor-critic, model-free algorithm based on the deterministic policy gradient that can operate over continuous action spaces. Using the same learning algorithm, network architecture and hyper-parameters, our algorithm robustly solves more than 20 simulated physics tasks, including classic problems such as cartpole swing-up, dexterous manipulation, legged locomotion and car driving. Our algorithm is able to find policies whose performance is competitive with those found by a planning algorithm with full access to the dynamics of the domain and its derivatives. We further demonstrate that for many of the tasks the algorithm can learn policies &quot;end-to-end&quot;: directly from raw pixel inputs.</dc:description>
+        <technical:url>https://arxiv.org/abs/1509.02971</technical:url>
         <rdfs:label xml:lang="en">Continuous control with deep reinforcement learning</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</time:year>
     </owl:NamedIndividual>
     
 
