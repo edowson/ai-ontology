@@ -111,6 +111,35 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#isA -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#isA">
+        <owl:equivalentProperty rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#isAn"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>is a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#isAn -->
 
     <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#isAn">
@@ -135,6 +164,24 @@
             </owl:Class>
         </rdfs:range>
         <rdfs:label xml:lang="en">is an</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#isUsedToSolveProblemsWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#isUsedToSolveProblemsWith">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Property"/>
+        <rdfs:label>is used to solve problems with</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -538,6 +585,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ActorCritic -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ActorCritic">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
+        <rdfs:label>Actor-Critic</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#ActorCriticMethod -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ActorCriticMethod">
@@ -611,11 +667,28 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Domain -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Domain">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#Engineering -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Engineering">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Domain"/>
         <rdfs:label xml:lang="en">Engineering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#InputProperty -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#InputProperty">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Property"/>
+        <rdfs:label>Input Property</rdfs:label>
     </owl:Class>
     
 
@@ -661,6 +734,15 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#NaturalLanguageProcessing">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ArtificialIntelligence"/>
         <rdfs:label xml:lang="en">Natural Language Processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#OutputProperty -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#OutputProperty">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Property"/>
+        <rdfs:label>Output Property</rdfs:label>
     </owl:Class>
     
 
@@ -1533,6 +1615,15 @@ E[Total errors] ≤ ϵ (T + (T − 1) + (T − 2) . . . + 1) ∝ ϵT^2</technica
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Continuous -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Continuous">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#Domain"/>
+        <rdfs:label>Continuous</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#D4PG -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#D4PG">
@@ -1554,7 +1645,9 @@ E[Total errors] ≤ ϵ (T + (T − 1) + (T − 2) . . . + 1) ∝ ϵT^2</technica
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DDPG">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DeterministicPolicyGradientAlgorithm"/>
+        <isA rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ModelFreeDeepReinforcementLearningMethod"/>
         <isAn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#OffPolicyActorCriticMethod"/>
+        <isUsedToSolveProblemsWith rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#HighDimensionalActionSpaces"/>
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#ContinuousControlWithDeepReinforcementLearning"/>
         <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay"/>
         <rdfs:comment xml:lang="en">Deep DPG</rdfs:comment>
@@ -1679,6 +1772,15 @@ Optimize loss function by stochastic gradient descent (SGD)</dc:description>
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
         <technical:helpsAvoid rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#MaximizationBias"/>
         <rdfs:label xml:lang="en">Different weights to select and evaluate actions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Discrete -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Discrete">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#Domain"/>
+        <rdfs:label>Discrete</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1940,6 +2042,24 @@ Slight change to computation of target value:
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#HighDimensionalActionSpaces -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HighDimensionalActionSpaces">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#OutputProperty"/>
+        <rdfs:label>High Dimensional Action Spaces</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#HighDimensionalObservationSpace -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HighDimensionalObservationSpace">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#InputProperty"/>
+        <rdfs:label>High Dimensional Observation Space</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#HighSampleEfficiency -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#HighSampleEfficiency">
@@ -2086,6 +2206,24 @@ We show how these methods can be extended for applications in motor control by c
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
         <technical:url xml:lang="en">http://leemon.com/</technical:url>
         <rdfs:label xml:lang="en">Leemon C. Baird III</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#LowDimensionalActionSpaces -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#LowDimensionalActionSpaces">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#OutputProperty"/>
+        <rdfs:label>Low-Dimensional Action Spaces</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#LowDimensionalObservationSpace -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#LowDimensionalObservationSpace">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#InputProperty"/>
+        <rdfs:label>Low-Dimensional Observation Space</rdfs:label>
     </owl:NamedIndividual>
     
 
