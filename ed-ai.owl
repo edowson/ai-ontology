@@ -1554,7 +1554,9 @@ E[Total errors] ≤ ϵ (T + (T − 1) + (T − 2) . . . + 1) ∝ ϵT^2</technica
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#DDPG">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#DeterministicPolicyGradientAlgorithm"/>
+        <isAn rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#OffPolicyActorCriticMethod"/>
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#ContinuousControlWithDeepReinforcementLearning"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ExperienceReplay"/>
         <rdfs:comment xml:lang="en">Deep DPG</rdfs:comment>
         <rdfs:label xml:lang="en">DDPG</rdfs:label>
     </owl:NamedIndividual>
