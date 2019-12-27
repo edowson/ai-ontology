@@ -640,6 +640,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Compiler -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Compiler">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+        <rdfs:label>Compiler</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#ComputerVision -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ComputerVision">
@@ -2234,6 +2243,19 @@ We show how these methods can be extended for applications in motor control by c
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
         <rdfs:label xml:lang="en">Model-Based Interval Estimation with Exploration Bonus</rdfs:label>
         <skos:altLabel xml:lang="en">MBIE-EB</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#MLIR -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#MLIR">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#Compiler"/>
+        <technical:url>https://ai.google/research/pubs/pub48035</technical:url>
+        <technical:url>https://www.youtube.com/watch?v=qzljG6DKgic</technical:url>
+        <rdfs:comment>The growing diversity of domain-specific accelerators spans all scales from mobile devices to data centers. It constitutes a global challenge across the high-performance computing stack and is particularly visible in the field of Machine Learning (ML). Program representations and compilers need to support a variety of devices at multiple levels of abstraction, from scalar instructions to coarse-grain parallelism and large scale distribution of computation graphs. This puts great pressure on the construction of both generic and target-specific optimizations, with domain specific language support, interfaces with legacy and future infrastructure, and special attention to future-proofness, modularity and code reuse. This motivates the construction of a new infrastructure, unifying graph representations, ML operators, optimizations at different levels and also across levels, targets, ML frameworks, training and inference, quantization, tightly interacting with runtime systems. Compilers are expected to readily support new applications, to easily port to new hardware, to bridge many levels of abstraction from dynamic, managed languages to vector accelerators and software-managed memories, while exposing high level knobs for autotuning, enable just-in-time operation, provide diagnostics and propagate functional and performance debugging information across the entire stack, and delivering performance close enough to hand-written assembly in most cases. We will share our vision, progress and plans towards the design and public release of such a compiler infrastructure.</rdfs:comment>
+        <rdfs:label>MLIR</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</time:year>
     </owl:NamedIndividual>
     
 
