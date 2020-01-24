@@ -738,6 +738,14 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Model -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Model">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#NaturalLanguageProcessing -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#NaturalLanguageProcessing">
@@ -833,6 +841,15 @@
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#UpdateTechnique">
         <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
         <rdfs:label xml:lang="en">Update Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#visualization-technique -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#visualization-technique">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+        <rdfs:label xml:lang="en">Visualization Technique</rdfs:label>
     </owl:Class>
     
 
@@ -2750,18 +2767,6 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     
 
 
-    <!-- http://www.edowson.com/ontologies/2019/2/ai#a-brief-survey-of-deep-reinforcement-learning -->
-
-    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#a-brief-survey-of-deep-reinforcement-learning">
-        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
-        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#kai-arulkumaran"/>
-        <technical:url xml:lang="en">https://arxiv.org/abs/1708.05866</technical:url>
-        <rdfs:label xml:lang="en">A Brief Survey of Deep Reinforcement Learning</rdfs:label>
-        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.edowson.com/ontologies/2019/2/ai#alexey-dosovitskiy -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#alexey-dosovitskiy">
@@ -2847,6 +2852,44 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
         <technical:url xml:lang="en">https://arxiv.org/abs/1712.05889</technical:url>
         <rdfs:label xml:lang="en">Ray - A Distributed Framework for Emerging AI Applications</rdfs:label>
         <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#visualizing-convolutional-networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#visualizing-convolutional-networks">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#visualization-technique"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#deep-inside-convolutional-networks"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#visualizing-and-understanding-convolutional-networks"/>
+        <rdfs:label>Visualizing Convolutional Networks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/author#karen-simonyan -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/author#karen-simonyan">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Karen Simonyan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/author#matthew-d-zeiler -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/author#matthew-d-zeiler">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Matthew D. Zeiler</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/author#rob-fergus -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/author#rob-fergus">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Rob Fergus</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3080,6 +3123,32 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#a-brief-survey-of-deep-reinforcement-learning -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#a-brief-survey-of-deep-reinforcement-learning">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#kai-arulkumaran"/>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1708.05866</technical:url>
+        <rdfs:label xml:lang="en">A Brief Survey of Deep Reinforcement Learning</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#deep-inside-convolutional-networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#deep-inside-convolutional-networks">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/author#karen-simonyan"/>
+        <dc:description xml:lang="en">This paper addresses the visualisation of image classification models, learnt using deep Convolutional Networks (ConvNets). We consider two visualisation techniques, based on computing the gradient of the class score with respect to the input image. The first one generates an image, which maximises the class score [Erhan et al., 2009], thus visualising the notion of the class, captured by a ConvNet. The second technique computes a class saliency map, specific to a given image and class. We show that such maps can be employed for weakly supervised object segmentation using classification ConvNets. Finally, we establish the connection between the gradient-based ConvNet visualisation methods and deconvolutional networks [Zeiler et al., 2013].</dc:description>
+        <technical:url>https://arxiv.org/abs/1312.6034</technical:url>
+        <rdfs:label xml:lang="en">Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps</rdfs:label>
+        <owl:versionInfo>v2</owl:versionInfo>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</time:year>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/paper#teach-repeat-plan -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#teach-repeat-plan">
@@ -3090,6 +3159,20 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
         <technical:url>https://arxiv.org/abs/1907.00520</technical:url>
         <rdfs:label xml:lang="en">Teach-Repeat-Replan: A Complete and Robust System for Aggressive Flight in Complex Environments</rdfs:label>
         <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#visualizing-and-understanding-convolutional-networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#visualizing-and-understanding-convolutional-networks">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/author#matthew-d-zeiler"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/author#rob-fergus"/>
+        <dc:description>Large Convolutional Network models have recently demonstrated impressive classification performance on the ImageNet benchmark. However there is no clear understanding of why they perform so well, or how they might be improved. In this paper we address both issues. We introduce a novel visualization technique that gives insight into the function of intermediate feature layers and the operation of the classifier. We also perform an ablation study to discover the performance contribution from different model layers. This enables us to find model architectures that outperform Krizhevsky \etal on the ImageNet classification benchmark. We show our ImageNet model generalizes well to other datasets: when the softmax classifier is retrained, it convincingly beats the current state-of-the-art results on Caltech-101 and Caltech-256 datasets.</dc:description>
+        <technical:url>https://arxiv.org/abs/1311.2901</technical:url>
+        <rdfs:label xml:lang="en">Visualizing and Understanding Convolutional Networks</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</time:year>
     </owl:NamedIndividual>
     
 
