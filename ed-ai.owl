@@ -845,6 +845,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#compression-technique -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#compression-technique">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
+        <rdfs:label xml:lang="en">Compression Technique</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#visualization-technique -->
 
     <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#visualization-technique">
@@ -2800,6 +2809,36 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#data-compression-using-autoencoders -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#data-compression-using-autoencoders">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#compression-technique"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#real-time-adaptive-image-compression"/>
+        <rdfs:label xml:lang="en">Data Compression using AutoEncoders</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#data-compression-using-generative-models -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#data-compression-using-generative-models">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#compression-technique"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#generative-compression"/>
+        <rdfs:label xml:lang="en">Data Compression using Generative Models</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#data-compression-using-recurrent-neural-networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#data-compression-using-recurrent-neural-networks">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#compression-technique"/>
+        <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#full-resolution-image-compression-with-recurrent-neural-networks"/>
+        <rdfs:label xml:lang="en">Data Compression using Recurrent Neural Networks (RNN)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#fei-gao -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#fei-gao">
@@ -2814,6 +2853,34 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#kai-arulkumaran">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
         <rdfs:label xml:lang="en">Kai Arulkumaran</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#oren-rippel -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#oren-rippel">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Oren Rippel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#paul-christiano -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#paul-christiano">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Paul Christiano</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#peter-goldsborough -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#peter-goldsborough">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <technical:email xml:lang="en">psag@fb.com</technical:email>
+        <rdfs:label xml:lang="en">Peter Goldsborough</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2856,6 +2923,15 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#thijs-vogels -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#thijs-vogels">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Thijs Vogels</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#visualizing-convolutional-networks -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#visualizing-convolutional-networks">
@@ -2863,6 +2939,24 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#deep-inside-convolutional-networks"/>
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#visualizing-and-understanding-convolutional-networks"/>
         <rdfs:label>Visualizing Convolutional Networks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/author#bowen-baker -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/author#bowen-baker">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Bowen Baker</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/author#george-toderici -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/author#george-toderici">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">George Toderici</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2890,6 +2984,26 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/author#rob-fergus">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
         <rdfs:label xml:lang="en">Rob Fergus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/author#shibani-santurkar -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/author#shibani-santurkar">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <technical:email>shibani@mit.edu</technical:email>
+        <technical:url>http://people.csail.mit.edu/shibani/</technical:url>
+        <rdfs:label>Shibani Santurkar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/author#siwei-ma -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/author#siwei-ma">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Siwei Ma</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3145,6 +3259,131 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
         <rdfs:label xml:lang="en">Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps</rdfs:label>
         <owl:versionInfo>v2</owl:versionInfo>
         <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#deep-reinforcement-learning-from-human-preferences -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#deep-reinforcement-learning-from-human-preferences">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#paul-christiano"/>
+        <dc:description xml:lang="en">For sophisticated reinforcement learning (RL) systems to interact usefully with real-world environments, we need to communicate complex goals to these systems. In this work, we explore goals defined in terms of (non-expert) human preferences between pairs of trajectory segments. We show that this approach can effectively solve complex RL tasks without access to the reward function, including Atari games and simulated robot locomotion, while providing feedback on less than one percent of our agent&apos;s interactions with the environment. This reduces the cost of human oversight far enough that it can be practically applied to state-of-the-art RL systems. To demonstrate the flexibility of our approach, we show that we can successfully train complex novel behaviors with about an hour of human time. These behaviors and environments are considerably more complex than any that have been previously learned from human feedback.</dc:description>
+        <technical:sourceCode>https://github.com/nottombrown/rl-teacher</technical:sourceCode>
+        <technical:url>https://arxiv.org/abs/1706.03741</technical:url>
+        <rdfs:label xml:lang="en">Deep reinforcement learning from human preferences</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#emergent-tool-use-from-multi-agent-autocurricula -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#emergent-tool-use-from-multi-agent-autocurricula">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/author#bowen-baker"/>
+        <dc:description xml:lang="en">Through multi-agent competition, the simple objective of hide-and-seek, and standard reinforcement learning algorithms at scale, we find that agents create a self-supervised autocurriculum inducing multiple distinct rounds of emergent strategy, many of which require sophisticated tool use and coordination. We find clear evidence of six emergent phases in agent strategy in our environment, each of which creates a new pressure for the opposing team to adapt; for instance, agents learn to build multi-object shelters using moveable boxes which in turn leads to agents discovering that they can overcome obstacles using ramps. We further provide evidence that multi-agent competition may scale better with increasing environment complexity and leads to behavior that centers around far more human-relevant skills than other self-supervised reinforcement learning methods such as intrinsic motivation. Finally, we propose transfer and fine-tuning as a way to quantitatively evaluate targeted capabilities, and we compare hide-and-seek agents to both intrinsic motivation and random initialization baselines in a suite of domain-specific intelligence tests.</dc:description>
+        <technical:sourceCode>https://github.com/openai/multi-agent-emergence-environments</technical:sourceCode>
+        <technical:url>https://arxiv.org/abs/1909.07528</technical:url>
+        <rdfs:label xml:lang="en">Emergent Tool Use From Multi-Agent Autocurricula</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#full-resolution-image-compression-with-recurrent-neural-networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#full-resolution-image-compression-with-recurrent-neural-networks">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/author#george-toderici"/>
+        <dc:description xml:lang="en">This paper presents a set of full-resolution lossy image compression methods based on neural networks. Each of the architectures we describe can provide variable compression rates during deployment without requiring retraining of the network: each network need only be trained once. All of our architectures consist of a recurrent neural network (RNN)-based encoder and decoder, a binarizer, and a neural network for entropy coding. We compare RNN types (LSTM, associative LSTM) and introduce a new hybrid of GRU and ResNet. We also study &quot;one-shot&quot; versus additive reconstruction architectures and introduce a new scaled-additive framework. We compare to previous work, showing improvements of 4.3%-8.8% AUC (area under the rate-distortion curve), depending on the perceptual metric used. As far as we know, this is the first neural network architecture that is able to outperform JPEG at image compression across most bitrates on the rate-distortion curve on the Kodak dataset images, with and without the aid of entropy coding.</dc:description>
+        <technical:sourceCode>https://github.com/1zb/pytorch-image-comp-rnn</technical:sourceCode>
+        <technical:sourceCode>https://github.com/tensorflow/models/tree/master/research/compression</technical:sourceCode>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1608.05148</technical:url>
+        <rdfs:label xml:lang="en">Full Resolution Image Compression with Recurrent Neural Networks</rdfs:label>
+        <owl:versionInfo xml:lang="en">v2</owl:versionInfo>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#generative-compression -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#generative-compression">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/author#shibani-santurkar"/>
+        <dc:description xml:lang="en">Traditional image and video compression algorithms rely on hand-crafted encoder/decoder pairs (codecs) that lack adaptability and are agnostic to the data being compressed. Here we describe the concept of generative compression, the compression of data using generative models, and suggest that it is a direction worth pursuing to produce more accurate and visually pleasing reconstructions at much deeper compression levels for both image and video data. We also demonstrate that generative compression is orders-of-magnitude more resilient to bit error rates (e.g. from noisy wireless channels) than traditional variable-length coding schemes.</dc:description>
+        <technical:sourceCode>https://github.com/unilight/Generative-Compression</technical:sourceCode>
+        <technical:url>https://arxiv.org/abs/1703.01467</technical:url>
+        <rdfs:label xml:lang="en">Generative Compression</rdfs:label>
+        <owl:versionInfo xml:lang="en">v2</owl:versionInfo>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#image-and-video-compression-with-neural-networks-a-review -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#image-and-video-compression-with-neural-networks-a-review">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/author#siwei-ma"/>
+        <dc:description xml:lang="en">In recent years, the image and video coding technologies have advanced by leaps and bounds. However, due to the popularization of image and video acquisition devices, the growth rate of image and video data is far beyond the improvement of the compression ratio. In particular, it has been widely recognized that there are increasing challenges of pursuing further coding performance improvement within the traditional hybrid coding framework. Deep convolution neural network (CNN) which makes the neural network resurge in recent years and has achieved great success in both artificial intelligent and signal processing fields, also provides a novel and promising solution for image and video compression. In this paper, we provide a systematic, comprehensive and up-to-date review of neural network based image and video compression techniques. The evolution and development of neural network based compression methodologies are introduced for images and video respectively. More specifically, the cutting-edge video coding techniques by leveraging deep learning and HEVC framework are presented and discussed, which promote the state-of-the-art video coding performance substantially. Moreover, the end-to-end image and video coding frameworks based on neural networks are also reviewed, revealing interesting explorations on next generation image and video coding frameworks/standards. The most significant research works on the image and video coding related topics using neural networks are highlighted, and future trends are also envisioned. In particular, the joint compression on semantic and visual information is tentatively explored to formulate high efficiency signal representation structure for both human vision and machine vision, which are the two dominant signal receptor in the age of artificial intelligence.</dc:description>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1904.03567</technical:url>
+        <rdfs:label xml:lang="en">Image and Video Compression with Neural Networks: A Review</rdfs:label>
+        <owl:versionInfo xml:lang="en">v2</owl:versionInfo>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#learned-video-compression -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#learned-video-compression">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#oren-rippel"/>
+        <dc:description xml:lang="en">We present a new algorithm for video coding, learned end-to-end for the low-latency mode. In this setting, our approach outperforms all existing video codecs across nearly the entire bitrate range. To our knowledge, this is the first ML-based method to do so.
+
+We evaluate our approach on standard video compression test sets of varying resolutions, and benchmark against all mainstream commercial codecs, in the low-latency mode. On standard-definition videos, relative to our algorithm, HEVC/H.265, AVC/H.264 and VP9 typically produce codes up to 60% larger. On high-definition 1080p videos, H.265 and VP9 typically produce codes up to 20% larger, and H.264 up to 35% larger. Furthermore, our approach does not suffer from blocking artifacts and pixelation, and thus produces videos that are more visually pleasing.
+
+We propose two main contributions. The first is a novel architecture for video compression, which (1) generalizes motion estimation to perform any learned compensation beyond simple translations, (2) rather than strictly relying on previously transmitted reference frames, maintains a state of arbitrary information learned by the model, and (3) enables jointly compressing all transmitted signals (such as optical flow and residual).
+
+Secondly, we present a framework for ML-based spatial rate control: namely, a mechanism for assigning variable bitrates across space for each frame. This is a critical component for video coding, which to our knowledge had not been developed within a machine learning setting.</dc:description>
+        <technical:url>https://arxiv.org/abs/1811.06981</technical:url>
+        <rdfs:label xml:lang="en">Learned Video Compression</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#powersgd -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#powersgd">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#thijs-vogels"/>
+        <dc:description xml:lang="en">We study gradient compression methods to alleviate the communication bottleneck in data-parallel distributed optimization. Despite the significant attention received, current compression schemes either do not scale well or fail to achieve the target test accuracy. We propose a new low-rank gradient compressor based on power iteration that can i) compress gradients rapidly, ii) efficiently aggregate the compressed gradients using all-reduce, and iii) achieve test performance on par with SGD. The proposed algorithm is the only method evaluated that achieves consistent wall-clock speedups when benchmarked against regular SGD with an optimized communication backend. We demonstrate reduced training times for convolutional networks as well as LSTMs on common datasets.</dc:description>
+        <technical:sourceCode>https://github.com/epfml/powersgd</technical:sourceCode>
+        <technical:url>https://arxiv.org/abs/1905.13727</technical:url>
+        <rdfs:label xml:lang="en">PowerSGD: Practical Low-Rank Gradient Compression for Distributed Optimization</rdfs:label>
+        <owl:versionInfo xml:lang="en">v2</owl:versionInfo>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/paper#real-time-adaptive-image-compression -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/paper#real-time-adaptive-image-compression">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#oren-rippel"/>
+        <dc:description xml:lang="en">We present a machine learning-based approach to lossy image compression which outperforms all existing codecs, while running in real-time.
+
+Our algorithm typically produces files 2.5 times smaller than JPEG and JPEG 2000, 2 times smaller than WebP, and 1.7 times smaller than BPG on datasets of generic images across all quality levels. At the same time, our codec is designed to be lightweight and deployable: for example, it can encode or decode the Kodak dataset in around 10ms per image on GPU.
+
+Our architecture is an autoencoder featuring pyramidal analysis, an adaptive coding module, and regularization of the expected codelength. We also supplement our approach with adversarial training specialized towards use in a compression setting: this enables us to produce visually pleasing reconstructions for very low bitrates.</dc:description>
+        <technical:sourceCode>https://github.com/rgerd/adaptive-image-compression</technical:sourceCode>
+        <technical:url>https://arxiv.org/abs/1705.05823</technical:url>
+        <rdfs:label xml:lang="en">Real-Time Adaptive Image Compression</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
     </owl:NamedIndividual>
     
 
