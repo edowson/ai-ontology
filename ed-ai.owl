@@ -3610,6 +3610,15 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#audio-compression -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#audio-compression">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Application"/>
+        <rdfs:label xml:lang="en">Audio Compression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#carla -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#carla">
@@ -3739,6 +3748,15 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#fei-gao">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
         <rdfs:label>Fei Gao</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#image-compression -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#image-compression">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Application"/>
+        <rdfs:label xml:lang="en">Image Compression</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3990,6 +4008,15 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
         <technical:url>https://arxiv.org/abs/1604.07078</technical:url>
         <rdfs:label xml:lang="en">Unsupervised Representation Learning of Structured Radio Communication Signals</rdfs:label>
         <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#video-compression -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#video-compression">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Application"/>
+        <rdfs:label xml:lang="en">Video Compression</rdfs:label>
     </owl:NamedIndividual>
     
 
