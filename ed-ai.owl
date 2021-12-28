@@ -3755,6 +3755,15 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#david-richter -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#david-richter">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">David Richter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#deep-architectures-for-modulation-recognition -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#deep-architectures-for-modulation-recognition">
@@ -3971,6 +3980,30 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
         <technical:url>https://arxiv.org/abs/1803.03145</technical:url>
         <rdfs:label xml:lang="en">Physical Layer Communications System Design Over-the-Air Using Adversarial Networks</rdfs:label>
         <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#qplane -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#qplane">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#x-plane-11"/>
+        <technical:url>https://github.com/JDatPNW/QPlane</technical:url>
+        <rdfs:label xml:lang="en">QPlane</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#qplane-an-open-source-reinforcement-learning-toolkit-for-autonomous-fixed-wing-aircraft-simulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#qplane-an-open-source-reinforcement-learning-toolkit-for-autonomous-fixed-wing-aircraft-simulation">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <describes rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#qplane"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#david-richter"/>
+        <technical:url>https://dl.acm.org/doi/pdf/10.1145/3458305.3478446</technical:url>
+        <rdfs:label xml:lang="en">QPlane - An Open-Source Reinforcement Learning Toolkit for Autonomous Fixed Wing Aircraft Simulation</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</time:year>
     </owl:NamedIndividual>
     
 
