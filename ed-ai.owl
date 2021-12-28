@@ -116,9 +116,11 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Engine"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Application"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
@@ -206,6 +208,15 @@
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#see -->
+
+    <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/ai#see">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label xml:lang="en">see</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/technical#authoredBy -->
 
     <owl:ObjectProperty rdf:about="http://www.edowson.com/ontologies/2019/2/technical#authoredBy">
@@ -252,9 +263,11 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Engine"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Application"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Problem"/>
@@ -450,8 +463,10 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Engine"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
@@ -461,8 +476,10 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Engine"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
@@ -480,8 +497,10 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Engine"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
@@ -491,8 +510,10 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Engine"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Algorithm"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Function"/>
+                    <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Mechanism"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Method"/>
                     <rdf:Description rdf:about="http://www.edowson.com/ontologies/2019/2/technical#Technique"/>
@@ -827,6 +848,14 @@
                 <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
             </rdf:Description>
         </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#Engine -->
+
+    <owl:Class rdf:about="http://www.edowson.com/ontologies/2019/2/ai#Engine">
+        <rdfs:subClassOf rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Technical"/>
     </owl:Class>
     
 
@@ -3581,6 +3610,21 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#a-framework-for-visually-realistic-multi-robot-simulation-in-natural-environment -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#a-framework-for-visually-realistic-multi-robot-simulation-in-natural-environment">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <describes rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#dronesimlab"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ori-ganoni"/>
+        <dc:description xml:lang="en">This paper presents a generalized framework for the simulation of multiple robots and drones in highly realistic models of natural environments. The proposed simulation architecture uses the Unreal Engine4 for generating both optical and depth sensor outputs from any position and orientation within the environment and provides several key domain specific simulation capabilities. Various components and functionalities of the system have been discussed in detail. The simulation engine also allows users to test and validate a wide range of computer vision algorithms involving different drone configurations under many types of environmental effects such as wind gusts. The paper demonstrates the effectiveness of the system by giving experimental results for a test scenario where one drone tracks the simulated motion of another in a complex natural environment.</dc:description>
+        <technical:url xml:lang="en">https://arxiv.org/abs/1708.01938</technical:url>
+        <rdfs:label xml:lang="en">A Framework for Visually Realistic Multi-robot Simulation in Natural Environment</rdfs:label>
+        <owl:versionInfo xml:lang="en">v1</owl:versionInfo>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#an-introduction-to-deep-learning-for-the-physical-layer -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#an-introduction-to-deep-learning-for-the-physical-layer">
@@ -3639,6 +3683,29 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
         <rdfs:label xml:lang="en">CARLA - An Open Urban Driving Simulator</rdfs:label>
         <rdfs:seeAlso>https://youtu.be/Hp8Dz-Zek2E</rdfs:seeAlso>
         <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#chiheb-trabelsi -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#chiheb-trabelsi">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Chiheb Trabelsi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#complex-valued-neural-networks-for-machine-learning-on-non-stationary-physical-data -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#complex-valued-neural-networks-for-machine-learning-on-non-stationary-physical-data">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#jesper-sören-dramsch"/>
+        <dc:description xml:lang="en">Deep learning has become an area of interest in most scientific areas, including physical sciences. Modern networks apply real-valued transformations on the data. Particularly, convolutions in convolutional neural networks discard phase information entirely. Many deterministic signals, such as seismic data or electrical signals, contain significant information in the phase of the signal. We explore complex-valued deep convolutional networks to leverage non-linear feature maps. Seismic data commonly has a lowcut filter applied, to attenuate noise from ocean waves and similar long wavelength contributions. Discarding the phase information leads to low-frequency aliasing analogous to the Nyquist-Shannon theorem for high frequencies. In non-stationary data, the phase content can stabilize training and improve the generalizability of neural networks. While it has been shown that phase content can be restored in deep neural networks, we show how including phase information in feature maps improves both training and inference from deterministic physical data. Furthermore, we show that the reduction of parameters in a complex network outperforms larger real-valued networks.</dc:description>
+        <technical:url>https://arxiv.org/abs/1905.12321</technical:url>
+        <rdfs:label xml:lang="en">Complex-valued neural networks for machine learning on non-stationary physical data</rdfs:label>
+        <owl:versionInfo xml:lang="en">v2</owl:versionInfo>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</time:year>
     </owl:NamedIndividual>
     
 
@@ -3703,6 +3770,23 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#deep-complex-networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#deep-complex-networks">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <see rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#complex-valued-neural-networks-for-machine-learning-on-non-stationary-physical-data"/>
+        <see rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#spectral-representations-for-convolutional-neural-networks"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#chiheb-trabelsi"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#yoshua-bengio"/>
+        <dc:description xml:lang="en">At present, the vast majority of building blocks, techniques, and architectures for deep learning are based on real-valued operations and representations. However, recent work on recurrent neural networks and older fundamental theoretical analysis suggests that complex numbers could have a richer representational capacity and could also facilitate noise-robust memory retrieval mechanisms. Despite their attractive properties and potential for opening up entirely new neural architectures, complex-valued deep neural networks have been marginalized due to the absence of the building blocks required to design such models. In this work, we provide the key atomic components for complex-valued deep neural networks and apply them to convolutional feed-forward networks and convolutional LSTMs. More precisely, we rely on complex convolutions and present algorithms for complex batch-normalization, complex weight initialization strategies for complex-valued neural nets and we use them in experiments with end-to-end training schemes. We demonstrate that such complex-valued models are competitive with their real-valued counterparts. We test deep complex models on several computer vision tasks, on music transcription using the MusicNet dataset and on Speech Spectrum Prediction using the TIMIT dataset. We achieve state-of-the-art performance on these audio-related tasks.</dc:description>
+        <technical:url>https://arxiv.org/abs/1705.09792</technical:url>
+        <rdfs:label xml:lang="en">Deep Complex Networks</rdfs:label>
+        <owl:versionInfo xml:lang="en">v4</owl:versionInfo>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</time:year>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#deep-learning-based-mimo-communications -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#deep-learning-based-mimo-communications">
@@ -3725,6 +3809,17 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
         <technical:url>https://arxiv.org/abs/1605.09221</technical:url>
         <rdfs:label xml:lang="en">Deep Reinforcement Learning Radio Control and Signal Detection with KeRLym, a Gym RL Agent</rdfs:label>
         <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#dronesimlab -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#dronesimlab">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Library"/>
+        <technical:uses rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#ue4"/>
+        <technical:url>https://github.com/orig74/DroneSimLab</technical:url>
+        <rdfs:label xml:lang="en">DroneSimLab</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3757,6 +3852,15 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#image-compression">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Application"/>
         <rdfs:label xml:lang="en">Image Compression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#jesper-sören-dramsch -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#jesper-sören-dramsch">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Jesper Sören Dramsch</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3802,6 +3906,15 @@ Immediately updates estimate of V after each (s, a, r , s&apos; ) tuple</dc:desc
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#oren-rippel">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
         <rdfs:label xml:lang="en">Oren Rippel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ori-ganoni -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ori-ganoni">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Ori Ganoni</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3988,11 +4101,48 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
     
 
 
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#spectral-representations-for-convolutional-neural-networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#spectral-representations-for-convolutional-neural-networks">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/02/technical#Paper"/>
+        <technical:authoredBy rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#oren-rippel"/>
+        <dc:description xml:lang="en">Discrete Fourier transforms provide a significant speedup in the computation of convolutions in deep learning. In this work, we demonstrate that, beyond its advantages for efficient computation, the spectral domain also provides a powerful representation in which to model and train convolutional neural networks (CNNs).
+
+We employ spectral representations to introduce a number of innovations to CNN design. First, we propose spectral pooling, which performs dimensionality reduction by truncating the representation in the frequency domain. This approach preserves considerably more information per parameter than other pooling strategies and enables flexibility in the choice of pooling output dimensionality. This representation also enables a new form of stochastic regularization by randomized modification of resolution. We show that these methods achieve competitive results on classification and approximation tasks, without using any dropout or max-pooling.
+
+Finally, we demonstrate the effectiveness of complex-coefficient spectral parameterization of convolutional filters. While this leaves the underlying model unchanged, it results in a representation that greatly facilitates optimization. We observe on a variety of popular CNN configurations that this leads to significantly faster convergence during training.</dc:description>
+        <technical:url>https://arxiv.org/abs/1506.03767</technical:url>
+        <rdfs:label xml:lang="en">Spectral Representations for Convolutional Neural Networks</rdfs:label>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</time:year>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.edowson.com/ontologies/2019/2/ai#thijs-vogels -->
 
     <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#thijs-vogels">
         <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
         <rdfs:label xml:lang="en">Thijs Vogels</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ue4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ue4">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#Engine"/>
+        <dc:description xml:lang="en">UnrealEngine 4</dc:description>
+        <rdfs:label xml:lang="en">UE4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#ue5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#ue5">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/ai#Engine"/>
+        <dc:description xml:lang="en">UnrealEngine 5</dc:description>
+        <rdfs:label xml:lang="en">UE5</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4028,6 +4178,24 @@ My research at DeepMind focuses on a number of fundamental challenges in AGI, in
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#deep-inside-convolutional-networks"/>
         <technical:describedIn rdf:resource="http://www.edowson.com/ontologies/2019/2/paper#visualizing-and-understanding-convolutional-networks"/>
         <rdfs:label>Visualizing Convolutional Networks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#x-plane-11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#x-plane-11">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#simulator"/>
+        <rdfs:label xml:lang="en">X-Plane-11</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.edowson.com/ontologies/2019/2/ai#yoshua-bengio -->
+
+    <owl:NamedIndividual rdf:about="http://www.edowson.com/ontologies/2019/2/ai#yoshua-bengio">
+        <rdf:type rdf:resource="http://www.edowson.com/ontologies/2019/2/technical#Author"/>
+        <rdfs:label xml:lang="en">Yoshua Bengio</rdfs:label>
     </owl:NamedIndividual>
     
 
